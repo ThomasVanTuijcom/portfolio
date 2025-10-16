@@ -1,8 +1,13 @@
 @import "tailwindcss";
 
+/* @plugin 'tailwind-scrollbar' {
+  nocompatible: true;
+} */
+
 :root {
   --background: #1E1E1E;
   --foreground: #F5F5F5;
+  --text-primary: #F5F5F5;
   --text-secondary: #52B788;
 }
 
@@ -20,14 +25,25 @@
   }
 }
 
-body {
+html {
+  min-height: 100%;
+  position: relative;
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: red;
   background-image:
     linear-gradient(to right, #41475185 2px, transparent 1px),
-    linear-gradient(to bottom, #41475185  2px, transparent 1px),
+    linear-gradient(to bottom, #41475185 2px, transparent 1px),
     url('../../../public/noise.svg');
-  background-size: 172px 172px;
-  background-position: 5.2% 0;
+  background-size: 172px 172px, 172px 172px, 200px 200px;
+  background-position: 5.2% 0, 5.2% 0, 0 0;
+  background-repeat: repeat, repeat, repeat;
+  background-attachment: fixed, fixed, fixed;
+}
+
+body {
+  height: 100%;
+  color: var(--text-primary);
+  font-family: Arial, Helvetica, sans-serif;
+  overflow-y: overlay;
+  background: transparent;
 }
