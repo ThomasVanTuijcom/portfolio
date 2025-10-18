@@ -20,9 +20,35 @@ export default function Presentation({
                         My journey has given me the opportunity to work on both academic projects and professional assignments, including an internship focused on SAP integration.
                         Through these experiences, I have developed a strong interest in teamwork, an eye for code quality, and the ability to quickly learn new tools. I am now looking to apply these skills in a professional environment where I can continue to grow and make a meaningful contribution.
                     </p>
-                    <div className='flex flex-row gap-15'>
-                        <button className='bg-(--text-secondary) text-[#292C33] rounded-2xl px-5 py-2 max-w-1/4 font-bold mt-6 w-1/4'>Resume</button>
-                        <button className='bg-[#292C33] text-(--text-secondary) border-(--text-secondary) border-1 rounded-2xl px-5 py-2 max-w-1/4 font-bold mt-6 w-1/4'>GitHub</button>
+                    <div className='flex flex-row gap-15 w-full'>
+                        <a
+                            href="/resume-en.pdf"
+                            download
+                            className='flex flex-row justify-center items-center bg-(--text-secondary) text-[#292C33] rounded-2xl px-5 py-2 font-bold mt-6 w-1/3 gap-2 z-1'>
+                            Resume
+                            <Image
+                                src="/download.svg"
+                                alt="new tab icon"
+                                width={20} // specify size
+                                height={20}
+                                className="object-contain"
+                            />
+                        </a>
+                        <a
+                            href="https://github.com/ThomasVanTuijcom"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="flex flex-row justify-center items-center bg-[#292C33] text-[var(--text-secondary)] border-[var(--text-secondary)] border-1 rounded-2xl px-5 py-2 font-bold mt-6 w-1/3 gap-2 z-1"
+                        >
+                            GitHub
+                            <Image
+                                src="/new-tab.png"
+                                alt="new tab icon"
+                                width={20} // specify size
+                                height={20}
+                                className="object-contain"
+                            />
+                        </a>
                     </div>
                 </div>
                 <div className='flex flex-row justify-center items-center w-1/2'>

@@ -15,7 +15,7 @@ export default function Page() {
       <Presentation id="home" />
       <Languages id="skills" />
       <Projects id="projects" />
-      <ResumeScroll />
+      <ResumeScroll id="experience" />
       <About id="about" />
       <Contact id="contact" />
       <Footer />

@@ -47,3 +47,8 @@ body {
   overflow-y: overlay;
   background: transparent;
 }
+
+#home button:hover {
+  transition: all 0.5s ease;
+  transform: scale(1.1);
+}
