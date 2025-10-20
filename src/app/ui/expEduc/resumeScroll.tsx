@@ -1,13 +1,13 @@
 "use client";
 import React, { useEffect, useRef, useState } from "react";
 import { bakehaus, karla } from "../fonts";
+import { motion, useScroll, useTransform } from "motion/react"
 
 export default function ResumeScroll({
   id,
 }: {
   id: string,
 }) {
-  const containerRef = useRef<HTMLDivElement>(null);
   const experience = [
     { title: "IT Sales Assistant - On-call temp work", subtitle: null, place: "Mediamarkt - Woluwe-Saint-Lambert", date: "2023 - Present" },
     { title: "Internship", subtitle: "Web Solution for Integrating ABAP-Code Checks into SAP System", place: "Mediamarkt - Woluwe-Saint-Lambert", date: "February 2024 – June 2024" },
@@ -21,38 +21,59 @@ export default function ResumeScroll({
     { title: "Upper Secondary Education Certificate", subtitle: "(Dutch-taught program)", place: "ZAVO Campus – Zaventem Hoogstraat ", date: "September 2014 – September 2021" },
   ]
 
+  const containerRef = useRef<HTMLDivElement>(null);
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start end", "end start"],
+  });
+  const progressHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
+  let rowIndex = 1;
+
   return (
-    <div id={id} className="flex flex-col items-center justify-center w-[100%] pt-20">
-      <section className="flex flex-row justify-center w-[80%]">
-        <h2 className={`${bakehaus.className} text-(--text-secondary) text-2xl w-[15%] text-right`}>Experience</h2>
-        <div className="w-[10%]" />
-        <div className="w-[45%]">
-          {experience.map(({ title, subtitle, place, date }, i) => (
-            <div className="mb-15 hover:text-(--text-secondary)">
+    <div ref={containerRef} className="flex justify-center w-full">
+      <div className={`grid grid-cols-[15%_10%_75%] grid-rows-${experience.length + education.length} gap-4`}>
+        <div className={`row-span-${experience.length}`}>
+          <h2 className={`${bakehaus.className} text-(--text-secondary) text-2xl text-right self-start row-span-${experience.length}`}>
+            Experience
+          </h2>
+        </div>
+        <div className={`row-span-${education.length} col-start-1 row-start-${experience.length + 1}`}>
+          <h2 className={`${bakehaus.className} text-(--text-secondary) text-2xl text-right self-start`}>
+            Education
+          </h2>
+        </div>
+        <div className={`row-span-${experience.length + education.length} col-start-2 row-start-1`}>
+          <motion.div
+            className="w-[6px] bg-(--text-secondary) origin-top rounded-full mx-auto"
+            style={{
+              height: progressHeight,
+            }}
+          />
+        </div>
+        {experience.map(({ title, subtitle, place, date }, i) => {
+          const currentRow = rowIndex + 1;
+          rowIndex++;
+          return (
+            <div className={`col-start-3 row-start-${currentRow} mb-10 hover:text-(--text-secondary)`} key={i}>
               <h4 className={`${karla.className} font-bold text-[20px]`}>{title}</h4>
               {subtitle && <h5 className={`${karla.className}`}>{subtitle}</h5>}
               <h5 className={`${karla.className}`}>{place}</h5>
               <h5 className={`${karla.className}`}>{date}</h5>
             </div>
-          ))}
-        </div>
-      </section>
-      <section className="flex flex-row justify-center w-[80%]">
-        <h2 className={`${bakehaus.className} text-(--text-secondary) text-2xl w-[15%] text-right`}>Education</h2>
-        <div className="w-[10%]" />
-        <div className="w-[45%]">
-          {education.map(({ title, subtitle, place, date }, i) => (
-            <div className="mb-15 hover:text-(--text-secondary)">
+          )
+        })}
+        {education.map(({ title, subtitle, place, date }, i) => {
+          const currentRow = rowIndex + 1;
+          rowIndex++;
+          return (
+            <div className={`col-start-3 row-start-${currentRow} mb-10 hover:text-(--text-secondary)`} key={i}>
               <h4 className={`${karla.className} font-bold text-[20px]`}>{title}</h4>
               {subtitle && <h5 className={`${karla.className}`}>{subtitle}</h5>}
               <h5 className={`${karla.className}`}>{place}</h5>
               <h5 className={`${karla.className}`}>{date}</h5>
             </div>
-          ))}
-        </div>
-      </section>
-      <div />
-      <div>
+          )
+        })}
       </div>
     </div>
   );
