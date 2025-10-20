@@ -24,55 +24,92 @@ export default function ResumeScroll({
   const containerRef = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start end", "end start"],
+    offset: ["center end", "end center"],
   });
   const progressHeight = useTransform(scrollYProgress, [0, 1], ["0%", "100%"]);
-  let rowIndex = 1;
+  let rowIndex = 0;
 
   return (
     <div ref={containerRef} className="flex justify-center w-full">
-      <div className={`grid grid-cols-[15%_10%_75%] grid-rows-${experience.length + education.length} gap-4`}>
-        <div className={`row-span-${experience.length}`}>
-          <h2 className={`${bakehaus.className} text-(--text-secondary) text-2xl text-right self-start row-span-${experience.length}`}>
+      <div
+        className={`grid grid-cols-[20%_5%_75%] gap-8`}
+        style={{
+          gridTemplateRows: `repeat(${experience.length + education.length}, auto)`,
+        }}
+      >
+        <div
+          style={{
+            gridRow: `span ${experience.length} / span ${experience.length}`,
+          }}
+        >
+          <h2
+            className={`${bakehaus.className} text-[var(--text-secondary)] text-2xl text-right self-start`}
+          >
             Experience
           </h2>
         </div>
-        <div className={`row-span-${education.length} col-start-1 row-start-${experience.length + 1}`}>
-          <h2 className={`${bakehaus.className} text-(--text-secondary) text-2xl text-right self-start`}>
+
+        <div
+          style={{
+            gridRowStart: experience.length + 1,
+            gridRowEnd: experience.length + 1 + education.length,
+          }}
+        >
+          <h2
+            className={`${bakehaus.className} text-[var(--text-secondary)] text-2xl text-right self-start`}
+          >
             Education
           </h2>
         </div>
-        <div className={`row-span-${experience.length + education.length} col-start-2 row-start-1`}>
-          <motion.div
-            className="w-[6px] bg-(--text-secondary) origin-top rounded-full mx-auto"
-            style={{
-              height: progressHeight,
-            }}
-          />
+        <div
+          style={{
+            gridRow: `span ${experience.length + education.length} / span ${experience.length + education.length}`,
+          }}
+          className="col-start-2 row-start-1 flex justify-center"
+        >
+          <div className="relative w-[4px] bg-[linear-gradient(to_bottom,transparent_0%,#A6A3A3_7%,#A6A3A3_93%,transparent_100%)] rounded-full h-full">
+            <motion.div
+              className="absolute top-0 left-1/2 w-[6px] -translate-x-1/2
+                 origin-top rounded-full
+                 bg-(--text-secondary)
+                 shadow-[0_0_20px_var(--text-secondary)]"
+              style={{
+                height: progressHeight,
+              }}
+            />
+          </div>
         </div>
         {experience.map(({ title, subtitle, place, date }, i) => {
-          const currentRow = rowIndex + 1;
-          rowIndex++;
+          const currentRow = ++rowIndex;
           return (
-            <div className={`col-start-3 row-start-${currentRow} mb-10 hover:text-(--text-secondary)`} key={i}>
-              <h4 className={`${karla.className} font-bold text-[20px]`}>{title}</h4>
+            <div
+              className={`col-start-3 row-start-${currentRow} mb-10 hover:text-[var(--text-secondary)]`}
+              key={`exp-${i}`}
+            >
+              <h4 className={`${karla.className} font-bold text-[20px]`}>
+                {title}
+              </h4>
               {subtitle && <h5 className={`${karla.className}`}>{subtitle}</h5>}
               <h5 className={`${karla.className}`}>{place}</h5>
               <h5 className={`${karla.className}`}>{date}</h5>
             </div>
-          )
+          );
         })}
         {education.map(({ title, subtitle, place, date }, i) => {
-          const currentRow = rowIndex + 1;
-          rowIndex++;
+          const currentRow = ++rowIndex;
           return (
-            <div className={`col-start-3 row-start-${currentRow} mb-10 hover:text-(--text-secondary)`} key={i}>
-              <h4 className={`${karla.className} font-bold text-[20px]`}>{title}</h4>
+            <div
+              className={`col-start-3 row-start-${currentRow} mb-10 hover:text-[var(--text-secondary)]`}
+              key={`edu-${i}`}
+            >
+              <h4 className={`${karla.className} font-bold text-[20px]`}>
+                {title}
+              </h4>
               {subtitle && <h5 className={`${karla.className}`}>{subtitle}</h5>}
               <h5 className={`${karla.className}`}>{place}</h5>
               <h5 className={`${karla.className}`}>{date}</h5>
             </div>
-          )
+          );
         })}
       </div>
     </div>
