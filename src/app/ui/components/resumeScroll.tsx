@@ -2,23 +2,27 @@
 import React, { useEffect, useRef, useState } from "react";
 import { bakehaus, karla } from "../fonts";
 import { motion, useScroll, useTransform } from "motion/react"
+import { useTranslations } from "next-intl";
 
 export default function ResumeScroll({
   id,
 }: {
   id: string,
 }) {
+  const t = useTranslations('Resume');
+  const exp = useTranslations('Resume.Experience');
+  const edu = useTranslations('Resume.Education');
   const experience = [
-    { title: "IT Sales Assistant - On-call temp work", subtitle: null, place: "Mediamarkt - Woluwe-Saint-Lambert", date: "2023 - Present" },
-    { title: "Internship", subtitle: "Web Solution for Integrating ABAP-Code Checks into SAP System", place: "Mediamarkt - Woluwe-Saint-Lambert", date: "February 2024 – June 2024" },
-    { title: "Student Job – IT Sales Assistant", subtitle: null, place: "Mediamarkt - Woluwe-Saint-Lambert", date: "2019 – 2023" },
-    { title: "Volunteer – YOUCA Action Day", subtitle: null, place: "Mediamarkt - Woluwe-Saint-Lambert", date: "October 19, 2019" },
-    { title: "Student Job – Archiving and Administrative Support", subtitle: "ONE – Office de la Naissance et de l’Enfance (Child and Family Agency)", place: "Brussels", date: "2018" },
+    { title: exp('job1.title'), subtitle: exp('job1.subtitle'), place: exp('job1.place'), date: exp('job1.date') },
+    { title: exp('job2.title'), subtitle: exp('job2.subtitle'), place: exp('job2.place'), date: exp('job2.date') },
+    { title: exp('job3.title'), subtitle: exp('job3.subtitle'), place: exp('job3.place'), date: exp('job3.date') },
+    { title: exp('job4.title'), subtitle: exp('job4.subtitle'), place: exp('job4.place'), date: exp('job4.date') },
+    { title: exp('job5.title'), subtitle: exp('job5.subtitle'), place: exp('job5.place'), date: exp('job5.date') },
   ]
   const education = [
-    { title: "Certification in Upper Secondary Education", subtitle: "(High School Diploma equivalent)", place: "BeCentral - Campus 19 (Member of 42)", date: "September 2024 – Present " },
-    { title: "Bachelor’s Degree in Application Development (3rd Year)", subtitle: null, place: "Haute École Bruxelles Brabant – HE2B ESI", date: "September 2021 – September 2023" },
-    { title: "Upper Secondary Education Certificate", subtitle: "(Dutch-taught program)", place: "ZAVO Campus – Zaventem Hoogstraat ", date: "September 2014 – September 2021" },
+    { title: edu('edu1.title'), subtitle: edu('edu1.subtitle'), place: edu('edu1.place'), date: edu('edu1.date') },
+    { title: edu('edu2.title'), subtitle: edu('edu2.subtitle'), place: edu('edu2.place'), date: edu('edu2.date') },
+    { title: edu('edu3.title'), subtitle: edu('edu3.subtitle'), place: edu('edu3.place'), date: edu('edu3.date') },
   ]
 
   const containerRef = useRef<HTMLDivElement>(null);
@@ -30,7 +34,7 @@ export default function ResumeScroll({
   let rowIndex = 0;
 
   return (
-    <div ref={containerRef} className="flex justify-center w-full">
+    <div id={id} ref={containerRef} className="flex justify-center w-full">
       <div
         className={`grid grid-cols-[20%_5%_75%] gap-8`}
         style={{
@@ -45,7 +49,7 @@ export default function ResumeScroll({
           <h2
             className={`${bakehaus.className} text-[var(--text-secondary)] text-2xl text-right self-start`}
           >
-            Experience
+            {t('expTitle')}
           </h2>
         </div>
 
@@ -58,7 +62,7 @@ export default function ResumeScroll({
           <h2
             className={`${bakehaus.className} text-[var(--text-secondary)] text-2xl text-right self-start`}
           >
-            Education
+            {t('educTitle')}
           </h2>
         </div>
         <div

@@ -1,4 +1,4 @@
-import Glassdiv from "../glassdiv";
+import Glassdiv from "./glassdiv";
 import Image from "next/image";
 import { karla } from "../fonts";
 

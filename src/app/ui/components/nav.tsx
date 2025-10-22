@@ -3,24 +3,27 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faHouse, faUser, faPaperPlane, faFolder, faCompass } from "@fortawesome/free-regular-svg-icons";
 import Image from 'next/image';
-import Glassdiv from "../glassdiv";
+import Glassdiv from "./glassdiv";
 import { useState, useRef } from "react";
 import { karla } from "../fonts";
+import { useTranslations } from "next-intl";
+import LanguageSwitcher from "./languageSwitcher";
 
 export default function NavBar() {
     const [tooltip, setTooltip] = useState<{ label: string, left: number, top: number } | null>(null);
+    const t = useTranslations('Navigation');
 
     const icons = [
-        { src: "/navIcons/icon_Home.png", target: "home", label: "Home" },
-        { src: "/navIcons/icon_Tool.png", target: "skills", label: "Skills" },
-        { src: "/navIcons/icon_Folder.png", target: "projects", label: "Projects" },
-        { src: "/navIcons/icon_Experience.svg", target: "experience", label: "Experience" },
-        { src: "/navIcons/icon_User.png", target: "about", label: "About" },
-        { src: "/navIcons/icon_Message.png", target: "contact", label: "Contact" },
+        { src: "/navIcons/icon_Home.png", target: "home", label: t('homeLbl') },
+        { src: "/navIcons/icon_Tool.png", target: "skills", label: t('skillsLbl') },
+        { src: "/navIcons/icon_Folder.png", target: "projects", label: t('projectsLbl') },
+        { src: "/navIcons/icon_Experience.svg", target: "experience", label: t('experienceLbl') },
+        { src: "/navIcons/icon_User.png", target: "about", label: t('aboutLbl') },
+        { src: "/navIcons/icon_Message.png", target: "contact", label: t('contactLbl') },
     ];
 
     return (
-        <div className="relative flex justify-center my-8">
+        <div className="relative flex flex-row justify-center items-center my-8 w-full">
             <Glassdiv className="flex flex-row justify-between items-center w-1/5 h-14 px-8 py-3 rounded-full">
                 {icons.map(({ src, target, label }, i) => {
                     const iconRef = useRef<HTMLDivElement>(null);
@@ -58,6 +61,9 @@ export default function NavBar() {
                     );
                 })}
             </Glassdiv>
+            <div className="absolute flex justify-end right-10 h-full w-1/8">
+                <LanguageSwitcher className="flex justify-center items-center w-1/2 h-full rounded-full"/>
+            </div>
 
             {tooltip && (
                 <div

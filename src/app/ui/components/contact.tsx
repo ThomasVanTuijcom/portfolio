@@ -1,11 +1,12 @@
 "use client";
 import { bakehaus, karla } from "../fonts";
-import Glassdiv from "../glassdiv";
+import Glassdiv from "./glassdiv";
 import Image from "next/image";
 import { NextResponse } from "next/server";
 import { Resend } from "resend";
 import { sendEmail } from "../../lib/actions"
 import { useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Contact({
     id,
@@ -13,6 +14,7 @@ export default function Contact({
     id: string,
 }) {
     const [errors, setErrors] = useState<{ email?: string; message?: string }>({});
+    const t = useTranslations('Contact');
 
     function validateEntries(formData: FormData) {
         const email = formData.get("email") as string;
@@ -20,15 +22,15 @@ export default function Contact({
         const newErrors: typeof errors = {};
 
         if (!email) {
-            newErrors.email = "Email is required.";
+            newErrors.email = t('emailReq');
         } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-            newErrors.email = "Please enter a valid email address.";
+            newErrors.email = t('emailValid');
         }
 
         if (!message) {
-            newErrors.message = "A message is required.";
+            newErrors.message = t('msgReq');
         } else if (message.length < 10) {
-            newErrors.message = "Message must be at least 10 characters long.";
+            newErrors.message = t('msgValid');
         }
 
         setErrors(newErrors);
@@ -54,7 +56,7 @@ export default function Contact({
                             className="object-contain"
                         />
                     </div>
-                    <h2 className={`${bakehaus.className} text-4xl font-regular`}>Get in Touch</h2>
+                    <h2 className={`${bakehaus.className} text-4xl font-regular`}>{t('title')}</h2>
                 </div>
                 <form
                     action={handleSubmit}
@@ -76,7 +78,7 @@ export default function Contact({
                         <input
                             type="text"
                             name="email"
-                            placeholder="Your email"
+                            placeholder={t('emailPlaceholder')}
                             className={`${karla.className} bg-(--text-primary) w-full px-8 py-4 rounded-3xl text-black font-bold`}
                             aria-describedby="email-error"
                         />
@@ -86,7 +88,7 @@ export default function Contact({
                     </div>
                     <div className=" flex flex-col relative backdrop-blur-xs bg-[#1E1E1E]/20 border border-white/10 shadow-lg overflow-hidden p-2 rounded-4xl w-full h-[30vh]">
                         <textarea
-                            placeholder="Your message..."
+                            placeholder={t('msgPlaceholder')}
                             name="message"
                             className={`${karla.className} bg-(--text-primary) w-full h-full py-4 px-8 rounded-3xl text-black resize-none font-bold`}
                             aria-describedby="message-error"
@@ -101,7 +103,7 @@ export default function Contact({
                                 type="submit"
                                 className="flex flex-row justify-center items-center bg-white w-full rounded-2xl py-4 px-8 gap-2">
                                 <h2 className={`${karla.className} text-[#292C33] text-[16px] font-bold tracking-[.3em]`}>
-                                    Send
+                                    {t('sendBtn')}
                                 </h2>
                                 <div className="relative w-5 h-5">
                                     <Image

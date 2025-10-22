@@ -6,12 +6,14 @@ import { bakehaus } from "../fonts";
 import ProjectCard from "./projectCard";
 import React from "react";
 import Slider from "react-slick";
+import { useTranslations } from "next-intl";
 
 export default function Projects({
     id,
 }: {
     id: string,
 }) {
+    const t = useTranslations('Projects');
     const settings = {
         dots: false,
         infinite: true,
@@ -32,7 +34,7 @@ export default function Projects({
 
     return (
         <div id={id} className="flex flex-col items-center justify-center gap-20 h-[100vh]">
-            <h2 className={`${bakehaus.className} text-5xl`}>Projects</h2>
+            <h2 className={`${bakehaus.className} text-5xl`}>{t('projectTitle')}</h2>
             <div className="w-3/5">
                 <Slider {...settings}>
                     <ProjectCard title="Minishell" img="/projects/bash.png" />

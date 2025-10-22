@@ -1,5 +1,91 @@
 {
-  "HomePage": {
-    "title": "Salut"
+  "Presentation": {
+    "greeting": "Bonjour,",
+    "name": "Je suis Thomas",
+    "entitlement": "Développeur Junior",
+    "place": "Bruxelles, Belgique",
+    "presentationText": "Développeur d’applications junior avec une solide expérience en programmation et en technologies web, je maîtrise des langages tels que Java, Kotlin, PHP, JavaScript et C/C++, ainsi que des frameworks comme React, Spring, Django et Laravel. Mon parcours m’a permis de travailler sur des projets académiques et professionnels, notamment lors d’un stage axé sur l’intégration SAP. Ces expériences m’ont donné le goût du travail en équipe, le souci de la qualité du code et la capacité d’apprendre rapidement de nouveaux outils. Je souhaite désormais mettre ces compétences au service d’un environnement professionnel où je pourrai continuer à progresser et apporter une contribution significative.",
+    "resumeBtn": "CV"
+  },
+  "Navigation": {
+    "homeLbl": "Accueil",
+    "skillsLbl": "Compétences",
+    "projectsLbl": "Projets",
+    "experienceLbl": "Expérience",
+    "aboutLbl": "À propos",
+    "contactLbl": "Contact"
+  },
+  "Projects": {
+    "projectTitle": "Projets"
+  },
+  "Resume": {
+    "expTitle": "Expérience",
+    "educTitle": "Éducation",
+    "Experience": {
+      "job1": {
+        "title": "Assistant Commercial IT - Travail temporaire sur appel",
+        "subtitle": "",
+        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "date": "2023 - Présent"
+      },
+      "job2": {
+        "title": "Stage",
+        "subtitle": "Solution Web pour l’intégration des contrôles de code ABAP dans le système SAP",
+        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "date": "Février 2024 – Juin 2024"
+      },
+      "job3": {
+        "title": "Job étudiant – Assistant Commercial IT",
+        "subtitle": "",
+        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "date": "2019 – 2023"
+      },
+      "job4": {
+        "title": "Bénévole – Journée d’Action YOUCA",
+        "subtitle": "",
+        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "date": "19 Octobre 2019"
+      },
+      "job5": {
+        "title": "Job étudiant – Archivage et Support Administratif",
+        "subtitle": "ONE – Office de la Naissance et de l’Enfance",
+        "place": "Bruxelles",
+        "date": "2018"
+      }
+    },
+    "Education": {
+      "edu1": {
+        "title": "Certification en Enseignement Secondaire Supérieur",
+        "subtitle": "(Équivalent du Diplôme de l’Enseignement Secondaire)",
+        "place": "BeCentral - Campus 19 (Membre de 42)",
+        "date": "Septembre 2024 – Présent"
+      },
+      "edu2": {
+        "title": "Baccalauréat en Développement d’Applications (3ème année)",
+        "subtitle": "",
+        "place": "Haute École Bruxelles Brabant – HE2B ESI",
+        "date": "Septembre 2021 – Septembre 2023"
+      },
+      "edu3": {
+        "title": "Certificat de l’Enseignement Secondaire Supérieur",
+        "subtitle": "(Programme enseigné en néerlandais)",
+        "place": "ZAVO Campus – Zaventem Hoogstraat",
+        "date": "Septembre 2014 – Septembre 2021"
+      }
+    }
+  },
+  "About": {
+    "title": "Un Regard Approfondi,",
+    "description": "En tant que développeur junior, mon profil combine des bases techniques solides avec une grande adaptabilité et une forte volonté d'apprendre. Mes expériences, que ce soit à travers mon stage ou différents jobs étudiants, m'ont permis de développer de la rigueur, un sens du service et de la confiance en communication. Je crois que ces qualités, combinées à ma motivation et mon ambition de m'améliorer, me permettront de m'intégrer rapidement et de devenir un membre efficace et engagé de l'équipe qui me donnera l'opportunité de faire mes preuves."
+  },
+  "Contact": {
+    "title": "Prendre Contact",
+    "emailPlaceholder": "Votre email",
+    "msgPlaceholder": "Votre message...",
+    "sendBtn": "Envoyer",
+    "emailReq": "L'email est requis.",
+    "emailValid": "Veuillez entrer une adresse email valide.",
+    "msgReq": "Un message est requis.",
+    "msgValid": "Le message doit contenir au moins 10 caractères."
   }
 }

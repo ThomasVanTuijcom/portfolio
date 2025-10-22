@@ -1,0 +1,91 @@
+{
+  "Presentation": {
+    "greeting": "Goeiendag,",
+    "name": "Ik ben Thomas",
+    "entitlement": "Junior Developer",
+    "place": "Brussel, België",
+    "presentationText": "Junior applicatieontwikkelaar met een stevige achtergrond in programmeren en webtechnologieën, ervaren met talen zoals Java, Kotlin, PHP, JavaScript en C/C++, en met frameworks zoals React, Spring, Django en Laravel. Mijn traject heeft mij de kans gegeven om aan zowel academische projecten als professionele opdrachten te werken, waaronder een stage gericht op SAP-integratie. Door deze ervaringen heb ik een sterke interesse ontwikkeld in teamwork, een oog voor codekwaliteit en het vermogen om snel nieuwe tools te leren. Ik ben nu op zoek naar een professionele omgeving waarin ik deze vaardigheden kan toepassen, verder kan groeien en een waardevolle bijdrage kan leveren.",
+    "resumeBtn": "CV"
+  },
+  "Navigation": {
+    "homeLbl": "Home",
+    "skillsLbl": "Vaardigheden",
+    "projectsLbl": "Projecten",
+    "experienceLbl": "Ervaring",
+    "aboutLbl": "Over mij",
+    "contactLbl": "Contact"
+  },
+  "Projects": {
+    "projectTitle": "Projecten"
+  },
+  "Resume": {
+    "expTitle": "Ervaring",
+    "educTitle": "Opleiding",
+    "Experience": {
+      "job1": {
+        "title": "IT-verkoopassistent - Tijdelijk werk op oproepbasis",
+        "subtitle": "",
+        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "date": "2023 - Heden"
+      },
+      "job2": {
+        "title": "Stage",
+        "subtitle": "Weboplossing voor het integreren van ABAP-codecontroles in het SAP-systeem",
+        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "date": "Februari 2024 – Juni 2024"
+      },
+      "job3": {
+        "title": "Studentenjob – IT-verkoopassistent",
+        "subtitle": "",
+        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "date": "2019 – 2023"
+      },
+      "job4": {
+        "title": "Vrijwilliger – YOUCA Actiedag",
+        "subtitle": "",
+        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "date": "19 Oktober 2019"
+      },
+      "job5": {
+        "title": "Studentenjob – Archivering en Administratieve Ondersteuning",
+        "subtitle": "ONE – Office de la Naissance et de l’Enfance",
+        "place": "Brussel",
+        "date": "2018"
+      }
+    },
+    "Education": {
+      "edu1": {
+        "title": "Certificaat Hoger Secundair Onderwijs",
+        "subtitle": "(Equivalent van het middelbare schooldiploma)",
+        "place": "BeCentral - Campus 19 (Lid van 42)",
+        "date": "September 2024 – Heden"
+      },
+      "edu2": {
+        "title": "Bachelor in Applicatieontwikkeling (3de jaar)",
+        "subtitle": "",
+        "place": "Hogeschool Brussel – HE2B ESI",
+        "date": "September 2021 – September 2023"
+      },
+      "edu3": {
+        "title": "Certificaat Hoger Secundair Onderwijs",
+        "subtitle": "(Nederlandstalig programma)",
+        "place": "ZAVO Campus – Zaventem Hoogstraat",
+        "date": "September 2014 – September 2021"
+      }
+    }
+  },
+  "About": {
+    "title": "Een Nader Kijk,",
+    "description": "Als junior developer combineert mijn profiel een solide technische basis met aanpassingsvermogen en een sterke leergierigheid. Mijn ervaringen, zowel via mijn stage als verschillende studentenjobs, hebben mij geholpen om nauwkeurigheid, servicegerichtheid en zelfvertrouwen in communicatie te ontwikkelen. Ik geloof dat deze kwaliteiten, samen met mijn motivatie en ambitie om te verbeteren, mij in staat zullen stellen om snel te integreren en een effectief en betrokken lid te worden van het team dat mij de kans geeft om mezelf te bewijzen."
+  },
+  "Contact": {
+    "title": "Neem Contact Op",
+    "emailPlaceholder": "Uw e-mail",
+    "msgPlaceholder": "Uw bericht...",
+    "sendBtn": "Zend",
+    "emailReq": "E-mail is verplicht.",
+    "emailValid": "Voer een geldig e-mailadres in.",
+    "msgReq": "Een bericht is verplicht.",
+    "msgValid": "Het bericht moet minstens 10 tekens bevatten."
+  }
+}
