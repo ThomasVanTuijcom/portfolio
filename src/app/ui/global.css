@@ -5,35 +5,32 @@
 } */
 
 :root {
+  --background: #F5F5F5;
+  --foreground: #1E1E1E;
+  --text-primary: #11141C;
+  --text-secondary: #52B788;
+  --noise: url('../../../public/noise-light.svg');
+  --grid-color: rgba(65, 71, 81, 0.42);
+}
+
+.dark {
   --background: #1E1E1E;
   --foreground: #F5F5F5;
   --text-primary: #F5F5F5;
   --text-secondary: #52B788;
+  --noise: url('../../../public/noise.svg');
+  --grid-color: rgba(65, 71, 81, 0.42);
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
 
 html {
   min-height: 100%;
   position: relative;
   background: var(--background);
-  background-color: red;
   background-image:
-    linear-gradient(to right, #41475185 2px, transparent 1px),
-    linear-gradient(to bottom, #41475185 2px, transparent 1px),
-    url('../../../public/noise.svg');
+    linear-gradient(to right, var(--grid-color) 2px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-color) 2px, transparent 1px),
+    var(--noise);
   background-size: 172px 172px, 172px 172px, 200px 200px;
   background-position: 5.2% 0, 5.2% 0, 0 0;
   background-repeat: repeat, repeat, repeat;

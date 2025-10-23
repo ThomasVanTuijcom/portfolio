@@ -4,7 +4,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { bakehaus } from "../fonts";
 import ProjectCard from "./projectCard";
-import React from "react";
 import Slider from "react-slick";
 import { useTranslations } from "next-intl";
 
@@ -46,18 +45,3 @@ export default function Projects({
         </div>
     );
 }
-// import { bakehaus } from "../fonts";
-// import ProjectCard from "./projectCard";
-
-// export default function Projects() {
-//     return (
-//         <div className="flex flex-col items-center justify-center mt-20 gap-20">
-//             <h2 className={`${bakehaus.className} text-5xl`}>Projects</h2>
-//             <div className="flex flex-row justify-between w-full px-70 gap-20">
-//                 <ProjectCard title="Minishell" img="/projects/bash.png" />
-//                 <ProjectCard title="Boulderdash" img="/projects/bash.png"/>
-//                 <ProjectCard title="SNCB" img="/projects/bash.png"/>
-//             </div>
-//         </div>
-//     )
-// }

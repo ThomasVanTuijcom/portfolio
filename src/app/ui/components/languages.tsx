@@ -1,5 +1,3 @@
-import Glassdiv from "./glassdiv";
-import Image from "next/image";
 import LanguageRow from "./languageRow";
 
 export default function Languages({

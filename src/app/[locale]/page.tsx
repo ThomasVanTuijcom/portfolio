@@ -7,7 +7,6 @@ import Languages from "../ui/components/languages"
 import NavBar from "../ui/components/nav"
 import Presentation from "../ui/components/presentation"
 import Projects from "../ui/components/projects"
-import LanguageSwitcher from "../ui/components/languageSwitcher"
 
 export default function Page() {
   return (

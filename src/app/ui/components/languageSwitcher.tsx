@@ -2,7 +2,6 @@
 import { useLocale } from "next-intl";
 import Glassdiv from "./glassdiv";
 import { usePathname, useRouter } from "next/navigation";
-import Image from "next/image";
 import { useState } from "react";
 import { karla } from "../fonts";
 
@@ -34,7 +33,7 @@ export default function LanguageSwitcher({
             <select
                 value={currentLocale}
                 onChange={(e) => handleLanguageChange(e.target.value)}
-                className={`${karla.className} w-full bg-transparent text-center font-semibold appearance-none outline-none cursor-pointer z-1`}
+                className={`${karla.className} w-full bg-transparent text-center font-bold appearance-none outline-none cursor-pointer z-1`}
             >
                 {languages.map(({ lan, label }) => (
                     <option

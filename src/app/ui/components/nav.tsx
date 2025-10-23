@@ -1,13 +1,12 @@
 'use client';
 
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHouse, faUser, faPaperPlane, faFolder, faCompass } from "@fortawesome/free-regular-svg-icons";
 import Image from 'next/image';
 import Glassdiv from "./glassdiv";
 import { useState, useRef } from "react";
 import { karla } from "../fonts";
 import { useTranslations } from "next-intl";
 import LanguageSwitcher from "./languageSwitcher";
+import ThemeSwitcher from './themeSwitcher';
 
 export default function NavBar() {
     const [tooltip, setTooltip] = useState<{ label: string, left: number, top: number } | null>(null);
@@ -61,7 +60,8 @@ export default function NavBar() {
                     );
                 })}
             </Glassdiv>
-            <div className="absolute flex justify-end right-10 h-full w-1/8">
+            <div className="absolute flex justify-end right-10 gap-2 h-full w-1/8">
+                <ThemeSwitcher />
                 <LanguageSwitcher className="flex justify-center items-center w-1/2 h-full rounded-full"/>
             </div>
 

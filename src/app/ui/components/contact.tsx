@@ -1,10 +1,7 @@
 "use client";
 import { bakehaus, karla } from "../fonts";
-import Glassdiv from "./glassdiv";
 import Image from "next/image";
-import { NextResponse } from "next/server";
-import { Resend } from "resend";
-import { sendEmail } from "../../lib/actions"
+import { sendEmail } from "../../lib/actions";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
 

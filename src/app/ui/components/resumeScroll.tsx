@@ -1,7 +1,7 @@
 "use client";
-import React, { useEffect, useRef, useState } from "react";
+import { useRef } from "react";
 import { bakehaus, karla } from "../fonts";
-import { motion, useScroll, useTransform } from "motion/react"
+import { motion, useScroll, useTransform } from "motion/react";
 import { useTranslations } from "next-intl";
 
 export default function ResumeScroll({
