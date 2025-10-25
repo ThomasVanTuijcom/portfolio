@@ -3,6 +3,8 @@ import { useRef } from "react";
 import { bakehaus, karla } from "../fonts";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useTranslations } from "next-intl";
+import { useTheme } from "./theme-context";
+import clsx from "clsx";
 
 export default function ResumeScroll({
   id,
@@ -12,6 +14,7 @@ export default function ResumeScroll({
   const t = useTranslations('Resume');
   const exp = useTranslations('Resume.Experience');
   const edu = useTranslations('Resume.Education');
+  const { theme } = useTheme();
   const experience = [
     { title: exp('job1.title'), subtitle: exp('job1.subtitle'), place: exp('job1.place'), date: exp('job1.date') },
     { title: exp('job2.title'), subtitle: exp('job2.subtitle'), place: exp('job2.place'), date: exp('job2.date') },
@@ -34,7 +37,14 @@ export default function ResumeScroll({
   let rowIndex = 0;
 
   return (
-    <div id={id} ref={containerRef} className="flex justify-center w-full">
+    <div
+      id={id}
+      ref={containerRef}
+      className={clsx(
+        "flex justify-center py-20 w-full",
+        theme === "light" &&
+        "bg-[radial-gradient(ellipse_45%_100%_at_53%_50%,rgba(245,245,245,0.8)_40%,rgba(245,245,245,0)_50%)]"
+      )}>
       <div
         className={`grid grid-cols-[20%_5%_75%] gap-8`}
         style={{

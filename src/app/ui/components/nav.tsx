@@ -1,24 +1,26 @@
 'use client';
 
 import Image from 'next/image';
-import Glassdiv from "./glassdiv";
+import Glassdiv from "./glass-div";
 import { useState, useRef } from "react";
 import { karla } from "../fonts";
 import { useTranslations } from "next-intl";
-import LanguageSwitcher from "./languageSwitcher";
-import ThemeSwitcher from './themeSwitcher';
+import LanguageSwitcher from "./language-switcher";
+import ThemeSwitcher from './theme-switcher';
+import { useTheme } from './theme-context';
 
 export default function NavBar() {
     const [tooltip, setTooltip] = useState<{ label: string, left: number, top: number } | null>(null);
     const t = useTranslations('Navigation');
+    const { theme } = useTheme();
 
     const icons = [
-        { src: "/navIcons/icon_Home.png", target: "home", label: t('homeLbl') },
-        { src: "/navIcons/icon_Tool.png", target: "skills", label: t('skillsLbl') },
-        { src: "/navIcons/icon_Folder.png", target: "projects", label: t('projectsLbl') },
-        { src: "/navIcons/icon_Experience.svg", target: "experience", label: t('experienceLbl') },
-        { src: "/navIcons/icon_User.png", target: "about", label: t('aboutLbl') },
-        { src: "/navIcons/icon_Message.png", target: "contact", label: t('contactLbl') },
+        { src: theme == 'light' ? "/navIcons/light/icon_Home.svg" : "/navIcons/dark/icon_Home.png", target: "home", label: t('homeLbl') },
+        { src: theme == 'light' ? "/navIcons/light/icon_Tool.svg" : "/navIcons/dark/icon_Tool.png", target: "skills", label: t('skillsLbl') },
+        { src: theme == 'light' ? "/navIcons/light/icon_Folder.svg" : "/navIcons/dark/icon_Folder.png", target: "projects", label: t('projectsLbl') },
+        { src: theme == 'light' ? "/navIcons/light/icon_Experience.svg" : "/navIcons/dark/icon_Experience.svg", target: "experience", label: t('experienceLbl') },
+        { src: theme == 'light' ? "/navIcons/light/icon_User.svg" : "/navIcons/dark/icon_User.png", target: "about", label: t('aboutLbl') },
+        { src: theme == 'light' ? "/navIcons/light/icon_Message.svg" : "/navIcons/dark/icon_Message.png", target: "contact", label: t('contactLbl') },
     ];
 
     return (
@@ -62,12 +64,12 @@ export default function NavBar() {
             </Glassdiv>
             <div className="absolute flex justify-end right-10 gap-2 h-full w-1/8">
                 <ThemeSwitcher />
-                <LanguageSwitcher className="flex justify-center items-center w-1/2 h-full rounded-full"/>
+                <LanguageSwitcher className="flex justify-center items-center w-1/2 h-full rounded-full" />
             </div>
 
             {tooltip && (
                 <div
-                    className={`${karla.className} absolute bg-[#292C33] px-2 py-1 rounded-md text-sm z-50 font-bold`}
+                    className={`${karla.className} absolute bg-[var(--tooltip-background)] px-2 py-1 rounded-md text-sm z-50 font-bold`}
                     style={{
                         top: tooltip.top,
                         left: tooltip.left,

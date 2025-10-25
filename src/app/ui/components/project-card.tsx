@@ -1,5 +1,5 @@
 import { karla } from "../fonts";
-import Glassdiv from "./glassdiv";
+import Glassdiv from "./glass-div";
 import Image from "next/image";
 
 export default function ProjectCard({
@@ -10,7 +10,7 @@ export default function ProjectCard({
     img: string;
 }) {
     return (
-        <Glassdiv className="rounded-4xl px-10 py-8 mx-5">
+        <Glassdiv className="rounded-4xl px-10 py-10 mx-5">
             <div className="flex flex-col items-center">
                 <div className="relative w-full aspect-square overflow-hidden rounded-2xl">
                     <Image

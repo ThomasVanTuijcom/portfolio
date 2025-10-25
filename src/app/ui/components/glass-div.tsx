@@ -10,7 +10,7 @@ export default function Glassdiv({
     return (
         <div
             className={clsx(
-                "relative backdrop-blur-xs bg-[#1E1E1E]/20 border border-white/15 shadow-lg overflow-hidden",
+                "relative backdrop-blur-xs bg-[var(--glass-background)] border border-white/15 shadow-lg overflow-hidden",
                 className
             )}
         >

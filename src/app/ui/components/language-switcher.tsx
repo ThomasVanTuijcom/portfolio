@@ -1,6 +1,6 @@
 'use client';
 import { useLocale } from "next-intl";
-import Glassdiv from "./glassdiv";
+import Glassdiv from "./glass-div";
 import { usePathname, useRouter } from "next/navigation";
 import { useState } from "react";
 import { karla } from "../fonts";
@@ -13,7 +13,6 @@ export default function LanguageSwitcher({
     const router = useRouter();
     const pathname = usePathname();
     const currentLocale = useLocale();
-    const [hovered, setHovered] = useState<string | null>(null);
 
     const handleLanguageChange = (lang: string) => {
         if (lang === currentLocale) return;
@@ -39,7 +38,7 @@ export default function LanguageSwitcher({
                     <option
                         key={lan}
                         value={lan}
-                        className={`${karla.className} bg-[#292C33]`}
+                        className={`${karla.className} bg-[var(--background)]`}
                     >
                         {label}
                     </option>

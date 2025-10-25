@@ -1,6 +1,6 @@
 import Image from 'next/image';
 import { bakehaus, karla } from '../fonts';
-import Glassdiv from './glassdiv';
+import Glassdiv from './glass-div';
 import { useTranslations } from 'next-intl';
 
 export default function Presentation({
@@ -22,10 +22,10 @@ export default function Presentation({
                     <h3 className="font-extrabold">
                         {t('entitlement')}
                     </h3>
-                    <h4 className="font-extralight dark:text-amber-800">
+                    <h4>
                         {t('place')}
                     </h4>
-                    <p className="text-[var(--text-primary)] font-extralight text-justify mt-5">
+                    <p className="text-[var(--text-primary)] text-justify mt-5">
                         {t('presentationText')}
                     </p>
                     <div className='flex gap-15 w-full'>

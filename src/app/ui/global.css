@@ -5,23 +5,28 @@
 } */
 
 :root {
-  --background: #F5F5F5;
-  --foreground: #1E1E1E;
-  --text-primary: #11141C;
-  --text-secondary: #52B788;
-  --noise: url('../../../public/noise-light.svg');
-  --grid-color: rgba(65, 71, 81, 0.42);
-}
-
-.dark {
   --background: #1E1E1E;
   --foreground: #F5F5F5;
+  --glass-background: rgba(30, 30, 30, 0.2);
+  --tooltip-background: rgba(41, 44, 51, 1);
+  --arrow-color: #F5F5F5;
   --text-primary: #F5F5F5;
   --text-secondary: #52B788;
   --noise: url('../../../public/noise.svg');
   --grid-color: rgba(65, 71, 81, 0.42);
 }
 
+.light {
+  --background: #F5F5F5;
+  --foreground: #1E1E1E;
+  --glass-background: rgba(245, 245, 245, 0.6);
+  --tooltip-background: rgba(245, 245, 245, 1);
+  --arrow-color: #1E1E1E;
+  --text-primary: #11141C;
+  --text-secondary: #52B788;
+  --noise: url('../../../public/noise-light.svg');
+  --grid-color: rgba(65, 71, 81, 0.42);
+}
 
 html {
   min-height: 100%;
@@ -32,7 +37,7 @@ html {
     linear-gradient(to bottom, var(--grid-color) 2px, transparent 1px),
     var(--noise);
   background-size: 172px 172px, 172px 172px, 200px 200px;
-  background-position: 5.2% 0, 5.2% 0, 0 0;
+  background-position: 5% 0, 5% 0, 0 0;
   background-repeat: repeat, repeat, repeat;
   background-attachment: fixed, fixed, fixed;
 }

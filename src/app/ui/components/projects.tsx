@@ -3,9 +3,33 @@
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { bakehaus } from "../fonts";
-import ProjectCard from "./projectCard";
+import ProjectCard from "./project-card";
 import Slider from "react-slick";
 import { useTranslations } from "next-intl";
+
+function NextArrow(props: any) {
+    const { onClick } = props;
+    return (
+        <div
+            className="absolute right-[-40px] top-1/2 -translate-y-1/2 text-gray-800 hover:text-blue-500 cursor-pointer"
+            onClick={onClick}
+        >
+            <div className="h-5 w-5 border-t-2 border-r-2 border-[var(--arrow-color)] rotate-45" />
+        </div>
+    );
+}
+
+function PrevArrow(props: any) {
+    const { onClick } = props;
+    return (
+        <div
+            className="absolute left-[-40px] top-1/2 -translate-y-1/2 text-gray-800 hover:text-blue-500 cursor-pointer"
+            onClick={onClick}
+        >
+            <div className="h-5 w-5 border-t-2 border-l-2 border-[var(--arrow-color)] -rotate-45" />
+        </div>
+    );
+}
 
 export default function Projects({
     id,
@@ -19,6 +43,8 @@ export default function Projects({
         speed: 500,
         slidesToShow: 3,
         slidesToScroll: 1,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         responsive: [
             {
                 breakpoint: 1024,

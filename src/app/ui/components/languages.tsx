@@ -1,4 +1,4 @@
-import LanguageRow from "./languageRow";
+import LanguageRow from "./language-row";
 
 export default function Languages({
     id,

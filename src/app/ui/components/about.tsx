@@ -1,7 +1,7 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import { bakehaus, karla } from "../fonts";
-import Glassdiv from "./glassdiv";
+import Glassdiv from "./glass-div";
 
 export default function About({
     id,
@@ -22,8 +22,8 @@ export default function About({
                     />
                 </div>
                 <div className="w-2/3 flex flex-col justify-center p-20 text-white">
-                    <h2 className={`${bakehaus.className} text-(--text-secondary) text-3xl font-regular mb-4`}>{t('title')}</h2>
-                    <p className={`${karla.className} mb-4 font-regular text-justify`}>
+                    <h2 className={`${bakehaus.className} text-[var(--text-secondary)] text-3xl font-regular mb-4`}>{t('title')}</h2>
+                    <p className={`${karla.className} text-[var(--text-primary)] mb-4 font-regular text-justify`}>
                         {t('description')}
                     </p>
                 </div>

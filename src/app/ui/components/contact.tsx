@@ -4,6 +4,8 @@ import Image from "next/image";
 import { sendEmail } from "../../lib/actions";
 import { useState } from "react";
 import { useTranslations } from "next-intl";
+import { useTheme } from "./theme-context";
+import clsx from "clsx";
 
 export default function Contact({
     id,
@@ -12,6 +14,7 @@ export default function Contact({
 }) {
     const [errors, setErrors] = useState<{ email?: string; message?: string }>({});
     const t = useTranslations('Contact');
+    const {theme} = useTheme();
 
     function validateEntries(formData: FormData) {
         const email = formData.get("email") as string;
@@ -47,7 +50,7 @@ export default function Contact({
                 <div className="flex flex-row items-center gap-4">
                     <div className="relative w-30 h-30">
                         <Image
-                            src="/envelope.svg"
+                            src={theme == 'light' ? "/envelope-light.svg" : "/envelope.svg"}
                             alt="icon"
                             fill
                             className="object-contain"
@@ -71,23 +74,23 @@ export default function Contact({
                         form.reset();
                     }}
                 >
-                    <div className="relative backdrop-blur-xs bg-[#1E1E1E]/20 border border-white/10 shadow-lg overflow-hidden p-2 rounded-4xl w-1/2">
+                    <div className="relative backdrop-blur-xs bg-[var(--glass-background)] border border-white/10 shadow-lg overflow-hidden p-2 rounded-4xl w-1/2">
                         <input
                             type="text"
                             name="email"
                             placeholder={t('emailPlaceholder')}
-                            className={`${karla.className} bg-(--text-primary) w-full px-8 py-4 rounded-3xl text-black font-bold`}
+                            className={`${karla.className} bg-[#f5f5f5] placeholder-[#11141C] w-full px-8 py-4 rounded-3xl text-black font-bold`}
                             aria-describedby="email-error"
                         />
                         <div id="email-error">
                             {errors.email && <p className={`${karla.className} text-red-500 text-sm mt-1 font-bold px-8`}>{errors.email}</p>}
                         </div>
                     </div>
-                    <div className=" flex flex-col relative backdrop-blur-xs bg-[#1E1E1E]/20 border border-white/10 shadow-lg overflow-hidden p-2 rounded-4xl w-full h-[30vh]">
+                    <div className=" flex flex-col relative backdrop-blur-xs bg-[var(--glass-background)] border border-white/10 shadow-lg overflow-hidden p-2 rounded-4xl w-full h-[30vh]">
                         <textarea
                             placeholder={t('msgPlaceholder')}
                             name="message"
-                            className={`${karla.className} bg-(--text-primary) w-full h-full py-4 px-8 rounded-3xl text-black resize-none font-bold`}
+                            className={`${karla.className} bg-[#f5f5f5] placeholder-[#11141C] w-full h-full py-4 px-8 rounded-3xl text-black resize-none font-bold`}
                             aria-describedby="message-error"
                         />
                         <div id="message-error">
