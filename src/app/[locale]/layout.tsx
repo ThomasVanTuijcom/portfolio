@@ -3,6 +3,7 @@ import { NextIntlClientProvider, hasLocale } from 'next-intl';
 import { notFound } from 'next/navigation';
 import { routing } from '@/i18n/routing';
 import { ThemeProvider } from '../ui/components/theme-context';
+import { karla } from '../ui/fonts';
 
 export default async function RootLayout({
   children,
@@ -16,8 +17,12 @@ export default async function RootLayout({
     notFound();
   }
   return (
-    <html lang="en">
-      <body>
+    <html lang="en" suppressHydrationWarning>
+      <head>
+        {/* Meta viewport pour le responsive */}
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      </head>
+      <body className={`${karla.className}`}>
         <NextIntlClientProvider>
           <ThemeProvider>
             {children}

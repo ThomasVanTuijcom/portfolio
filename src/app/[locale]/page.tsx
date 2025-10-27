@@ -10,16 +10,18 @@ import Projects from "../ui/components/projects"
 
 export default function Page() {
   return (
-    <main>
-      <Background />
+    <div className="pt-8">
       <NavBar />
-      <Presentation id="home" />
-      <Languages id="skills" />
-      <Projects id="projects" />
-      <ResumeScroll id="experience" />
-      <About id="about" />
-      <Contact id="contact" />
+      <main className="px-4">
+        <Background />
+        <Presentation id="home" />
+        <Languages id="skills" />
+        <Projects id="projects" />
+        <ResumeScroll id="experience" />
+        <About id="about" />
+        <Contact id="contact" />
+      </main>
       <Footer />
-    </main>
+    </div>
   )
 }
