@@ -11,7 +11,7 @@ function NextArrow(props: any) {
 	const { onClick } = props;
 	return (
 		<div
-			className="absolute top-1/2 right-[-40px] -translate-y-1/2 cursor-pointer text-gray-800 hover:text-blue-500"
+			className="absolute top-1/2 right-[-40px] -translate-y-1/2 transform cursor-pointer transition-transform duration-200 ease-in-out hover:scale-120"
 			onClick={onClick}
 		>
 			<div className="h-5 w-5 rotate-45 border-t-2 border-r-2 border-[var(--arrow-color)]" />
@@ -23,7 +23,7 @@ function PrevArrow(props: any) {
 	const { onClick } = props;
 	return (
 		<div
-			className="absolute top-1/2 left-[-40px] -translate-y-1/2 cursor-pointer text-gray-800 hover:text-blue-500"
+			className="absolute top-1/2 left-[-40px] -translate-y-1/2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-120"
 			onClick={onClick}
 		>
 			<div className="h-5 w-5 -rotate-45 border-t-2 border-l-2 border-[var(--arrow-color)]" />
@@ -58,7 +58,7 @@ export default function Projects({ id }: { id: string }) {
 			id={id}
 			className="flex h-[100vh] flex-col items-center justify-center gap-20"
 		>
-			<h2 className={`${bakehaus.className} text-5xl`}>{t("projectTitle")}</h2>
+			<h2 className={`${bakehaus.className} text-[var(--text-secondary)] text-5xl`}>{t("projectTitle")}</h2>
 			<div className="w-3/5">
 				<Slider {...settings}>
 					<ProjectCard title="Minishell" img="/projects/bash.png" />

@@ -94,7 +94,7 @@ export default function ResumeScroll({ id }: { id: string }) {
 					}}
 				>
 					<h2
-						className={`${bakehaus.className} self-start text-right text-2xl text-[var(--text-secondary)]`}
+						className={`${bakehaus.className} self-start text-right text-3xl text-[var(--text-secondary)]`}
 					>
 						{t("expTitle")}
 					</h2>
@@ -107,7 +107,7 @@ export default function ResumeScroll({ id }: { id: string }) {
 					}}
 				>
 					<h2
-						className={`${bakehaus.className} self-start text-right text-2xl text-[var(--text-secondary)]`}
+						className={`${bakehaus.className} self-start text-right text-3xl text-[var(--text-secondary)]`}
 					>
 						{t("educTitle")}
 					</h2>
@@ -131,7 +131,7 @@ export default function ResumeScroll({ id }: { id: string }) {
 					const currentRow = ++rowIndex;
 					return (
 						<div
-							className={`col-start-3 row-start-${currentRow} mb-10 hover:text-[var(--text-secondary)]`}
+							className={`col-start-3 row-start-${currentRow} mb-10 origin-left transform transition-transform hover:scale-110 hover:text-[var(--text-secondary)]`}
 							key={`exp-${i}`}
 						>
 							<h4 className="text-[20px] font-bold">{title}</h4>
@@ -145,7 +145,7 @@ export default function ResumeScroll({ id }: { id: string }) {
 					const currentRow = ++rowIndex;
 					return (
 						<div
-							className={`col-start-3 row-start-${currentRow} mb-10 hover:text-[var(--text-secondary)]`}
+							className={`col-start-3 row-start-${currentRow} mb-10 origin-left transform transition-transform hover:scale-110 hover:text-[var(--text-secondary)]`}
 							key={`edu-${i}`}
 						>
 							<h4 className="text-[20px] font-bold">{title}</h4>

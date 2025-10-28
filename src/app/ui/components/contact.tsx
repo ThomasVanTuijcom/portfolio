@@ -47,7 +47,7 @@ export default function Contact({ id }: { id: string }) {
 			className="flex h-[100vh] w-full flex-row items-center justify-center"
 		>
 			<div className="flex w-full flex-col sm:w-2/5">
-				<div className="flex flex-row items-center justify-center gap-4">
+				<div className="flex flex-row items-center justify-center gap-4 lg:justify-normal">
 					<div className="relative h-30 w-30">
 						<Image
 							src={theme == "light" ? "/envelope-light.svg" : "/envelope.svg"}
@@ -109,8 +109,8 @@ export default function Contact({ id }: { id: string }) {
 							)}
 						</div>
 					</div>
-					<div className="flex justify-end">
-						<div className="relative w-1/4 overflow-hidden rounded-3xl border border-white/10 bg-[#1E1E1E]/20 p-2 shadow-lg backdrop-blur-xs">
+					<div className="flex w-full lg:justify-end">
+						<div className="relative w-full overflow-hidden rounded-3xl border border-white/10 bg-[#1E1E1E]/20 p-2 shadow-lg backdrop-blur-xs lg:w-2/7">
 							<button
 								type="submit"
 								className="flex w-full flex-row items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4"

@@ -2,9 +2,11 @@ import Image from "next/image";
 import { bakehaus, karla } from "../fonts";
 import Glassdiv from "./glass-div";
 import { useTranslations } from "next-intl";
+import { Cursor, Typewriter } from "nextjs-simple-typewriter";
 
 export default function Presentation({ id }: { id: string }) {
 	const t = useTranslations("Presentation");
+	const greetings = [t("greetings.g1"), t("greetings.g2"), t("greetings.g3")];
 	return (
 		<div id={id} className="flex w-full justify-center">
 			<Glassdiv className="my-[110px] flex w-full gap-20 rounded-4xl px-4 py-10 lg:w-3/5 lg:px-15 lg:py-15">
@@ -12,7 +14,8 @@ export default function Presentation({ id }: { id: string }) {
 					<h1
 						className={`${bakehaus.className} text-3xl text-[var(--text-secondary)]`}
 					>
-						{t("greeting")}
+						<Typewriter words={greetings} loop={0} delaySpeed={3000} typeSpeed={200} deleteSpeed={170} />
+						<Cursor />
 					</h1>
 					<h1 className={`${bakehaus.className} text-3xl`}>{t("name")}</h1>
 					<h3 className="font-extrabold">{t("entitlement")}</h3>

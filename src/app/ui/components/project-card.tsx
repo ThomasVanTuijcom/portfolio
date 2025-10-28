@@ -10,7 +10,7 @@ export default function ProjectCard({
 	img: string;
 }) {
 	return (
-		<Glassdiv className="mx-5 rounded-4xl px-10 py-10">
+		<Glassdiv className="mx-5 my-3 transform rounded-4xl px-10 py-10 transition-transform duration-500 ease-in-out hover:scale-105">
 			<div className="flex flex-col items-center">
 				<div className="relative aspect-square w-full overflow-hidden rounded-2xl">
 					<Image

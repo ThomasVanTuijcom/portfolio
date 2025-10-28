@@ -1,6 +1,10 @@
 {
   "Presentation": {
-    "greeting": "Bonjour,",
+    "greetings": {
+      "g1": "Bonjour,", 
+      "g2": "Salut,", 
+      "g3": "Hello,"
+    },
     "name": "Je suis Thomas",
     "entitlement": "Développeur Junior",
     "place": "Bruxelles, Belgique",

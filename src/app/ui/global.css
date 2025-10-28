@@ -5,53 +5,79 @@
 } */
 
 :root {
-  --background: #1E1E1E;
-  --foreground: #F5F5F5;
-  --glass-background: rgba(30, 30, 30, 0.2);
-  --tooltip-background: rgba(41, 44, 51, 1);
-  --arrow-color: #F5F5F5;
-  --text-primary: #F5F5F5;
-  --text-secondary: #52B788;
-  --noise: url('../../../public/noise.svg');
-  --grid-color: rgba(65, 71, 81, 0.42);
+	--background: #1e1e1e;
+	--foreground: #f5f5f5;
+	--glass-background: rgba(30, 30, 30, 0.2);
+	--tooltip-background: rgba(41, 44, 51, 1);
+	--arrow-color: #f5f5f5;
+	--text-primary: #f5f5f5;
+	--text-secondary: #52b788;
+	--noise: url("../../../public/noise.svg");
+	--grid-color: rgba(65, 71, 81, 0.42);
 }
 
 .light {
-  --background: #F5F5F5;
-  --foreground: #1E1E1E;
-  --glass-background: rgba(245, 245, 245, 0.6);
-  --tooltip-background: rgba(245, 245, 245, 1);
-  --arrow-color: #1E1E1E;
-  --text-primary: #11141C;
-  --text-secondary: #52B788;
-  --noise: url('../../../public/noise-light.svg');
-  --grid-color: rgba(65, 71, 81, 0.42);
+	--background: #f5f5f5;
+	--foreground: #1e1e1e;
+	--glass-background: rgba(245, 245, 245, 0.6);
+	--tooltip-background: rgba(245, 245, 245, 1);
+	--arrow-color: #1e1e1e;
+	--text-primary: #11141c;
+	--text-secondary: #52b788;
+	--noise: url("../../../public/noise-light.svg");
+	--grid-color: rgba(65, 71, 81, 0.42);
 }
 
 html {
-  min-height: 100%;
-  min-width: 100%;
-  position: relative;
-  background: var(--background);
-  background-image:
-    linear-gradient(to right, var(--grid-color) 2px, transparent 1px),
-    linear-gradient(to bottom, var(--grid-color) 2px, transparent 1px),
-    var(--noise);
-  background-size: 172px 172px, 172px 172px, 200px 200px;
-  background-position: 5% 0, 5% 0, 0 0;
-  background-repeat: repeat, repeat, repeat;
-  background-attachment: fixed, fixed, fixed;
+	min-height: 100%;
+	min-width: 100%;
+	position: relative;
+	background: var(--background);
+	background-image:
+		linear-gradient(to right, var(--grid-color) 2px, transparent 1px),
+		linear-gradient(to bottom, var(--grid-color) 2px, transparent 1px),
+		var(--noise);
+	background-size:
+		172px 172px,
+		172px 172px,
+		200px 200px;
+	background-position:
+		5% 0,
+		5% 0,
+		0 0;
+	background-repeat: repeat, repeat, repeat;
+	background-attachment: fixed, fixed, fixed;
 }
 
 body {
-  height: 100%;
-  color: var(--text-primary);
-  font-family: Arial, Helvetica, sans-serif;
-  overflow-y: overlay;
-  background: transparent;
+	height: 100%;
+	color: var(--text-primary);
+	font-family: Arial, Helvetica, sans-serif;
+	overflow-y: overlay;
+	background: transparent;
 }
 
-#home button:hover {
-  transition: all 0.5s ease;
-  transform: scale(1.1);
+a:hover {
+	transition: all 0.5s ease;
+	transform: scale(1.1);
+}
+
+@keyframes appear {
+	from {
+		transform: scale(0.8);
+	}
+	to {
+		transform: scale(1);
+	}
+}
+
+#home,
+#skills,
+#projects,
+#experience,
+#about,
+#contact {
+	animation: appear 1s ease-out;
+	animation-timeline: view();
+	animation-range: entry 0 cover 40%;
 }
