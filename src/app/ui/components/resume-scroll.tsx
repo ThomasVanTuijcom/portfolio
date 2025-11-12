@@ -1,10 +1,10 @@
 "use client";
-import { useRef } from "react";
-import { bakehaus, karla } from "../fonts";
+import clsx from "clsx";
 import { motion, useScroll, useTransform } from "motion/react";
 import { useTranslations } from "next-intl";
+import { useRef } from "react";
+import { bakehaus } from "../fonts";
 import { useTheme } from "./theme-context";
-import clsx from "clsx";
 
 export default function ResumeScroll({ id }: { id: string }) {
 	const t = useTranslations("Resume");

@@ -1,7 +1,6 @@
-import { useState } from "react";
+import Image from "next/image";
 import Glassdiv from "./glass-div";
 import { useTheme } from "./theme-context";
-import Image from "next/image";
 
 export default function ThemeSwitcher() {
 	const { theme, toggleTheme } = useTheme();

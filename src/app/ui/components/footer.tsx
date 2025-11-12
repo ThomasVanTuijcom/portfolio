@@ -1,4 +1,3 @@
-import { karla } from "../fonts";
 
 export default function Footer() {
 	return (

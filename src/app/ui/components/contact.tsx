@@ -1,9 +1,9 @@
 "use client";
-import { bakehaus, karla } from "../fonts";
-import Image from "next/image";
-import { sendEmail } from "../../lib/actions";
-import { useState } from "react";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { useState } from "react";
+import { sendEmail } from "../../lib/actions";
+import { bakehaus } from "../fonts";
 import { useTheme } from "./theme-context";
 
 export default function Contact({ id }: { id: string }) {

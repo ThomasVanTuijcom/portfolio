@@ -1,13 +1,12 @@
 "use client";
 
-import Image from "next/image";
-import Glassdiv from "./glass-div";
-import { useState, useRef } from "react";
-import { karla } from "../fonts";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
+import { useRef, useState } from "react";
+import Glassdiv from "./glass-div";
 import LanguageSwitcher from "./language-switcher";
-import ThemeSwitcher from "./theme-switcher";
 import { useTheme } from "./theme-context";
+import ThemeSwitcher from "./theme-switcher";
 
 export default function NavBar() {
 	const [tooltip, setTooltip] = useState<{
@@ -78,17 +77,16 @@ export default function NavBar() {
 					return (
 						<div
 							key={i}
-							ref={iconRef}
 							className="relative flex cursor-pointer flex-col items-center"
-							onMouseEnter={() => {
-								if (iconRef.current) {
-									const rect = iconRef.current.getBoundingClientRect();
-									setTooltip({
-										label,
-										left: rect.left + rect.width / 2 + window.scrollX,
-										top: rect.bottom + window.scrollY - 15,
-									});
-								}
+							onMouseEnter={(e) => {
+								const rect = (
+									e.currentTarget as HTMLDivElement
+								).getBoundingClientRect();
+								setTooltip({
+									label,
+									left: rect.left + rect.width / 2 + window.scrollX,
+									top: rect.bottom + window.scrollY - 15,
+								});
 							}}
 							onMouseLeave={() => setTooltip(null)}
 							onClick={() =>

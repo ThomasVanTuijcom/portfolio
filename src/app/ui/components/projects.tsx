@@ -1,14 +1,14 @@
 "use client";
 
-import "slick-carousel/slick/slick.css";
+import { useTranslations } from "next-intl";
+import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
+import "slick-carousel/slick/slick.css";
 import { bakehaus } from "../fonts";
 import ProjectCard from "./project-card";
-import Slider from "react-slick";
-import { useTranslations } from "next-intl";
+import { CustomArrowProps } from 'react-slick';
 
-function NextArrow(props: any) {
-	const { onClick } = props;
+function NextArrow({ onClick }: CustomArrowProps) {
 	return (
 		<div
 			className="absolute top-1/2 right-[-40px] -translate-y-1/2 transform cursor-pointer transition-transform duration-200 ease-in-out hover:scale-120"
@@ -19,8 +19,7 @@ function NextArrow(props: any) {
 	);
 }
 
-function PrevArrow(props: any) {
-	const { onClick } = props;
+function PrevArrow({ onClick }: CustomArrowProps) {
 	return (
 		<div
 			className="absolute top-1/2 left-[-40px] -translate-y-1/2 cursor-pointer transition-transform duration-200 ease-in-out hover:scale-120"

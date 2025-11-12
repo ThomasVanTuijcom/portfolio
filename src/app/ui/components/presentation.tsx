@@ -1,8 +1,8 @@
-import Image from "next/image";
-import { bakehaus, karla } from "../fonts";
-import Glassdiv from "./glass-div";
 import { useTranslations } from "next-intl";
+import Image from "next/image";
 import { Cursor, Typewriter } from "nextjs-simple-typewriter";
+import { bakehaus } from "../fonts";
+import Glassdiv from "./glass-div";
 
 export default function Presentation({ id }: { id: string }) {
 	const t = useTranslations("Presentation");

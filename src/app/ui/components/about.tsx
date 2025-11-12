@@ -1,6 +1,6 @@
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { bakehaus, karla } from "../fonts";
+import { bakehaus } from "../fonts";
 import Glassdiv from "./glass-div";
 
 export default function About({ id }: { id: string }) {

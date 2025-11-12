@@ -1,6 +1,5 @@
-import { karla } from "../fonts";
-import Glassdiv from "./glass-div";
 import Image from "next/image";
+import Glassdiv from "./glass-div";
 
 export default function ProjectCard({
 	title,

@@ -1,9 +1,7 @@
 "use client";
 import { useLocale } from "next-intl";
-import Glassdiv from "./glass-div";
 import { usePathname, useRouter } from "next/navigation";
-import { useState } from "react";
-import { karla } from "../fonts";
+import Glassdiv from "./glass-div";
 
 export default function LanguageSwitcher({ className }: { className: string }) {
 	const router = useRouter();
