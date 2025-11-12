@@ -72,8 +72,6 @@ export default function NavBar() {
 		<nav className="relative flex w-full items-center justify-center">
 			<Glassdiv className="flex h-14 w-9/10 flex-row items-center justify-between rounded-full px-8 py-3 md:w-1/2 lg:w-1/5">
 				{icons.map(({ src, target, label }, i) => {
-					const iconRef = useRef<HTMLDivElement>(null);
-
 					return (
 						<div
 							key={i}
