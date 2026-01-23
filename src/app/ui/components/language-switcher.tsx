@@ -3,7 +3,7 @@ import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
 import Glassdiv from "./glass-div";
 
-export default function LanguageSwitcher({ className }: { className: string }) {
+export default function LanguageSwitcher() {
 	const router = useRouter();
 	const pathname = usePathname();
 	const currentLocale = useLocale();
@@ -22,7 +22,7 @@ export default function LanguageSwitcher({ className }: { className: string }) {
 	];
 
 	return (
-		<Glassdiv className={className}>
+		<Glassdiv className="flex aspect-square h-full items-center justify-center rounded-full p-4">
 			<select
 				value={currentLocale}
 				onChange={(e) => handleLanguageChange(e.target.value)}
@@ -34,7 +34,7 @@ export default function LanguageSwitcher({ className }: { className: string }) {
 					</option>
 				))}
 			</select>
-			<svg
+			{/* <svg
 				xmlns="http://www.w3.org/2000/svg"
 				className="pointer-events-none absolute right-5 h-4 w-4"
 				fill="none"
@@ -47,7 +47,7 @@ export default function LanguageSwitcher({ className }: { className: string }) {
 					strokeWidth={2}
 					d="M19 9l-7 7-7-7"
 				/>
-			</svg>
+			</svg> */}
 		</Glassdiv>
 	);
 }

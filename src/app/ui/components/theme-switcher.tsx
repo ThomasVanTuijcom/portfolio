@@ -10,7 +10,7 @@ export default function ThemeSwitcher() {
 		<Glassdiv className="flex aspect-square h-full items-center justify-center rounded-full p-4">
 			<button
 				onClick={toggleTheme}
-				className="z-1 flex h-full w-full items-center justify-center cursor-pointer"
+				className="z-1 flex h-full w-full cursor-pointer items-center justify-center"
 			>
 				<Image
 					src={src}

@@ -45,7 +45,7 @@ export default function Languages({ id }: { id: string }) {
 					{languages.slice(i, i + iconsPerRow).map((lang, j) => (
 						<div
 							key={j}
-							className="relative flex h-20 aspect-square w-20 min-w-16 justify-center sm:h-24 sm:w-24"
+							className="relative flex aspect-square h-20 w-20 min-w-16 justify-center sm:h-24 sm:w-24"
 						>
 							<div className="absolute inset-3 z-1 rounded-full bg-white/100 shadow-[0_0_2px_0px_rgba(255,255,255,1)] blur-[8px] hover:bg-[var(--text-secondary)]"></div>
 							<Image
@@ -74,7 +74,7 @@ export default function Languages({ id }: { id: string }) {
 	return (
 		<div
 			id={id}
-			className="flex h-[100vh] flex-col items-center justify-center gap-8 sm:px-12 md:px-20 lg:w-[860px] mx-auto"
+			className="mx-auto flex h-[100vh] flex-col items-center justify-center gap-8 sm:px-12 md:px-20 lg:w-[860px]"
 		>
 			{rows}
 		</div>

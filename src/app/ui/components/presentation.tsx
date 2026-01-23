@@ -9,8 +9,8 @@ export default function Presentation({ id }: { id: string }) {
 	const greetings = [t("greetings.g1"), t("greetings.g2"), t("greetings.g3")];
 	return (
 		<div id={id} className="flex w-full justify-center">
-			<Glassdiv className="my-[100px] flex w-[1152px] gap-20 rounded-4xl px-4 md:px-8 py-10">
-				<div className="flex w-auto max-w-[480px] flex-col justify-center gap-2">
+			<Glassdiv className="my-[100px] flex w-[1152px] gap-20 rounded-4xl px-4 py-10 md:px-8">
+				<div className="flex w-auto flex-col justify-center gap-2 md:max-w-[480px]">
 					<h1
 						className={`${bakehaus.className} text-3xl text-[var(--text-secondary)]`}
 					>
@@ -61,18 +61,8 @@ export default function Presentation({ id }: { id: string }) {
 						</a>
 					</div>
 				</div>
-				{/* <div className="flex flex-1 items-center justify-center">
-					<div className="relative aspect-square w-full max-w-[549px]">
-						<Image
-							src="/illustration.png"
-							alt="Hello"
-							fill
-							className="object-contain"
-						/>
-					</div>
-				</div> */}
 				<div className="hidden flex-1 items-center justify-center md:flex">
-					<div className="relative aspect-square w-full min-w-[250px] max-w-[549px]">
+					<div className="relative aspect-square w-full max-w-[549px] min-w-[250px]">
 						<Image
 							src="/illustration.png"
 							alt="Hello"

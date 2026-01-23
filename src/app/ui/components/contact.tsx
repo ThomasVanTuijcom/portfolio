@@ -46,8 +46,8 @@ export default function Contact({ id }: { id: string }) {
 			id={id}
 			className="flex h-[100vh] w-full flex-row items-center justify-center"
 		>
-			<div className="flex w-full flex-col sm:w-2/5">
-				<div className="flex flex-row items-center justify-center gap-4 lg:justify-normal">
+			<div className="flex w-[1000px] flex-col">
+				<div className="flex flex-row items-center justify-normal gap-4">
 					<div className="relative h-30 w-30">
 						<Image
 							src={theme == "light" ? "/envelope-light.svg" : "/envelope.svg"}
@@ -78,7 +78,7 @@ export default function Contact({ id }: { id: string }) {
 						form.reset();
 					}}
 				>
-					<div className="relative w-full overflow-hidden rounded-4xl border border-white/10 bg-[var(--glass-background)] p-2 shadow-lg backdrop-blur-xs sm:w-1/2">
+					<div className="relative w-full max-w-[477px] overflow-hidden rounded-4xl border border-white/10 bg-[var(--glass-background)] p-2 shadow-lg backdrop-blur-xs sm:w-[477px]">
 						<input
 							type="text"
 							name="email"
@@ -109,8 +109,8 @@ export default function Contact({ id }: { id: string }) {
 							)}
 						</div>
 					</div>
-					<div className="flex w-full lg:justify-end">
-						<div className="relative w-full overflow-hidden rounded-3xl border border-white/10 bg-[#1E1E1E]/20 p-2 shadow-lg backdrop-blur-xs lg:w-2/7">
+					<div className="flex w-full justify-end">
+						<div className="relative w-full max-w-[300px] overflow-hidden rounded-3xl border border-white/10 bg-[#1E1E1E]/20 p-2 shadow-lg backdrop-blur-xs sm:w-[300px]">
 							<button
 								type="submit"
 								className="flex w-full flex-row items-center justify-center gap-2 rounded-2xl bg-white px-8 py-4"

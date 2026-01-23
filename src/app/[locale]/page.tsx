@@ -10,7 +10,7 @@ import Projects from "../ui/components/projects"
 
 export default function Page() {
   return (
-    <div className="pt-8">
+    <div>
       <NavBar />
       <main className="px-4">
         <Background />

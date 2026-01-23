@@ -22,7 +22,7 @@ export default async function RootLayout({
         {/* Meta viewport pour le responsive */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
-      <body className={`${karla.className}`}>
+      <body className={`${karla.className} pt-8 text-[14px] sm:text-[16px]`}>
         <NextIntlClientProvider>
           <ThemeProvider>
             {children}

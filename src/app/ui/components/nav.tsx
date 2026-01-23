@@ -16,7 +16,7 @@ export default function NavBar() {
 	} | null>(null);
 	const t = useTranslations("Navigation");
 	const { theme } = useTheme();
-	const iconRef = useRef<HTMLDivElement>(null);
+	const [menuOpen, setMenuOpen] = useState(false);
 
 	const icons = [
 		{
@@ -71,7 +71,18 @@ export default function NavBar() {
 
 	return (
 		<nav className="relative flex w-full items-center justify-center px-4">
-			<Glassdiv className="flex h-14 w-[445px] flex-row items-center justify-between rounded-full px-4 sm:px-8 py-3">
+			<button
+				onClick={() => setMenuOpen(true)}
+				className="absolute right-8 md:hidden"
+				aria-label="Open menu"
+			>
+				<div className="flex flex-col gap-1">
+					<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+					<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+					<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+				</div>
+			</button>
+			<Glassdiv className="hidden h-14 w-[445px] flex-row items-center justify-between rounded-full px-4 py-3 sm:px-8 md:flex">
 				{icons.map(({ src, target, label }, i) => {
 					return (
 						<div
@@ -90,17 +101,18 @@ export default function NavBar() {
 							}}
 							className="flex cursor-pointer flex-col items-center"
 						>
-							<div className="relative mx-1.5 sm:mx-2 h-6 w-6 rounded-md p-2 transition-all duration-200 hover:scale-110 hover:bg-[var(--text-secondary)] sm:h-7 sm:w-7 md:h-8 md:w-8">
+							<div className="relative mx-1.5 h-6 w-6 rounded-md p-2 transition-all duration-200 hover:scale-110 hover:bg-[var(--text-secondary)] sm:mx-2 sm:h-7 sm:w-7 md:h-8 md:w-8">
 								<Image src={src} alt={target} fill className="object-contain" />
 							</div>
 						</div>
 					);
 				})}
 			</Glassdiv>
-			<div className="absolute right-10 hidden h-full w-1/8 justify-end gap-2 md:flex">
+			<div className="absolute top-1/2 right-4 hidden h-full -translate-y-1/2 gap-2 md:flex">
 				<ThemeSwitcher />
-				<LanguageSwitcher className="flex h-full w-1/2 items-center justify-center rounded-full" />
+				<LanguageSwitcher />
 			</div>
+
 			{tooltip && (
 				<div
 					className="pointer-events-none absolute z-50 rounded-md bg-[var(--tooltip-background)] px-2 py-1 text-center text-sm font-bold whitespace-nowrap"
@@ -111,6 +123,46 @@ export default function NavBar() {
 					}}
 				>
 					{tooltip.label}
+				</div>
+			)}
+
+			{menuOpen && (
+				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 md:hidden">
+					<Glassdiv className="w-[90%] max-w-sm rounded-2xl p-6">
+						<div className="flex justify-end">
+							<button
+								onClick={() => setMenuOpen(false)}
+								className="text-xl font-bold"
+							>
+								✕
+							</button>
+						</div>
+
+						<ul className="mt-6 flex flex-col gap-6">
+							{icons.map(({ src, target, label }, i) => (
+								<li
+									key={i}
+									className="flex items-center gap-4 text-lg"
+									onClick={() => setMenuOpen(false)}
+								>
+									<div className="relative h-6 w-6">
+										<Image
+											src={src}
+											alt={label}
+											fill
+											className="object-contain"
+										/>
+									</div>
+									<span>{label}</span>
+								</li>
+							))}
+						</ul>
+
+						<div className="mt-8 flex justify-between">
+							<ThemeSwitcher />
+							<LanguageSwitcher />
+						</div>
+					</Glassdiv>
 				</div>
 			)}
 		</nav>

@@ -19,7 +19,7 @@ export default function ProjectCard({
 						className="object-cover"
 					/>
 				</div>
-				<h3 className="text-[18px] md:text-[22px] font-extrabold">{title}</h3>
+				<h3 className="text-[18px] font-extrabold md:text-[22px]">{title}</h3>
 			</div>
 		</Glassdiv>
 	);
