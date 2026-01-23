@@ -16,6 +16,7 @@ export default function NavBar() {
 	} | null>(null);
 	const t = useTranslations("Navigation");
 	const { theme } = useTheme();
+	const iconRef = useRef<HTMLDivElement>(null);
 
 	const icons = [
 		{
@@ -69,38 +70,28 @@ export default function NavBar() {
 	];
 
 	return (
-		<nav className="relative flex w-full items-center justify-center">
-			<Glassdiv className="flex h-14 w-9/10 flex-row items-center justify-between rounded-full px-8 py-3 md:w-1/2 lg:w-1/5">
+		<nav className="relative flex w-full items-center justify-center px-4">
+			<Glassdiv className="flex h-14 w-[445px] flex-row items-center justify-between rounded-full px-4 sm:px-8 py-3">
 				{icons.map(({ src, target, label }, i) => {
 					return (
 						<div
 							key={i}
-							className="relative flex cursor-pointer flex-col items-center"
 							onMouseEnter={(e) => {
-								const rect = (
-									e.currentTarget as HTMLDivElement
-								).getBoundingClientRect();
+								const rect = e.currentTarget.getBoundingClientRect();
+								console.log(e.currentTarget);
 								setTooltip({
 									label,
 									left: rect.left + rect.width / 2 + window.scrollX,
-									top: rect.bottom + window.scrollY - 15,
+									top: rect.bottom + window.scrollY - 12,
 								});
 							}}
-							onMouseLeave={() => setTooltip(null)}
-							onClick={() =>
-								document
-									.getElementById(target)
-									?.scrollIntoView({ behavior: "smooth" })
-							}
+							onMouseLeave={() => {
+								setTooltip(null);
+							}}
+							className="flex cursor-pointer flex-col items-center"
 						>
-							<div className="relative rounded-md p-1 transition-all duration-200 hover:scale-110 hover:bg-[var(--text-secondary)]">
-								<Image
-									src={src}
-									alt={target}
-									width={32}
-									height={32}
-									className="object-contain"
-								/>
+							<div className="relative mx-1.5 sm:mx-2 h-6 w-6 rounded-md p-2 transition-all duration-200 hover:scale-110 hover:bg-[var(--text-secondary)] sm:h-7 sm:w-7 md:h-8 md:w-8">
+								<Image src={src} alt={target} fill className="object-contain" />
 							</div>
 						</div>
 					);
@@ -110,10 +101,9 @@ export default function NavBar() {
 				<ThemeSwitcher />
 				<LanguageSwitcher className="flex h-full w-1/2 items-center justify-center rounded-full" />
 			</div>
-
 			{tooltip && (
 				<div
-					className="absolute z-50 hidden rounded-md bg-[var(--tooltip-background)] px-2 py-1 text-sm font-bold sm:block"
+					className="pointer-events-none absolute z-50 rounded-md bg-[var(--tooltip-background)] px-2 py-1 text-center text-sm font-bold whitespace-nowrap"
 					style={{
 						top: tooltip.top,
 						left: tooltip.left,

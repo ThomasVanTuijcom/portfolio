@@ -1,5 +1,7 @@
+"use client";
 import Image from "next/image";
 import Glassdiv from "./glass-div";
+import { useEffect, useState } from "react";
 
 export default function Languages({ id }: { id: string }) {
 	const languages = [
@@ -20,17 +22,32 @@ export default function Languages({ id }: { id: string }) {
 		{ icon: "/lanIcons/Logo_React.png", name: "React" },
 	];
 
+	const getIconsPerRow = () => {
+		if (typeof window === "undefined") return 5;
+		if (window.innerWidth < 640) return 3;
+		if (window.innerWidth < 1024) return 4;
+		return 5;
+	};
+
+	const [iconsPerRow, setIconsPerRow] = useState(getIconsPerRow());
+
+	useEffect(() => {
+		const handleResize = () => setIconsPerRow(getIconsPerRow());
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+
 	const rows = [];
-	for (let i = 0; i < languages.length; i += 5) {
+	for (let i = 0; i < languages.length; i += iconsPerRow) {
 		rows.push(
 			<div key={i} className="flex w-full flex-col items-center">
-				<Glassdiv className="flex w-full flex-row justify-between rounded-full px-15 py-5 lg:w-3/7">
-					{languages.slice(i, i + 5).map((lang, j) => (
+				<Glassdiv className="flex w-full flex-row justify-between rounded-full px-5 py-5 sm:px-11 md:px-15 lg:px-9 xl:px-11 2xl:px-15">
+					{languages.slice(i, i + iconsPerRow).map((lang, j) => (
 						<div
 							key={j}
-							className="relative flex h-24 w-24 items-center justify-center"
+							className="relative flex h-20 aspect-square w-20 min-w-16 justify-center sm:h-24 sm:w-24"
 						>
-							<div className="absolute inset-0 z-1 rounded-full bg-white/100 shadow-[0_0_2px_2px_rgba(255,255,255,1)] blur-[5px] hover:bg-[var(--text-secondary)]"></div>
+							<div className="absolute inset-3 z-1 rounded-full bg-white/100 shadow-[0_0_2px_0px_rgba(255,255,255,1)] blur-[8px] hover:bg-[var(--text-secondary)]"></div>
 							<Image
 								src={lang.icon}
 								alt="icon"
@@ -40,8 +57,8 @@ export default function Languages({ id }: { id: string }) {
 						</div>
 					))}
 				</Glassdiv>
-				<div className="flex w-full flex-row justify-between px-15 py-2 lg:w-3/7">
-					{languages.slice(i, i + 5).map((lang, i) => (
+				<div className="flex w-full flex-row justify-between rounded-full px-5 py-5 sm:px-11 md:px-15 lg:px-9 xl:px-11 2xl:px-15">
+					{languages.slice(i, i + iconsPerRow).map((lang, i) => (
 						<div
 							key={i}
 							className="relative flex w-24 items-center justify-center"
@@ -57,7 +74,7 @@ export default function Languages({ id }: { id: string }) {
 	return (
 		<div
 			id={id}
-			className="flex h-[100vh] flex-col items-center justify-center gap-8"
+			className="flex h-[100vh] flex-col items-center justify-center gap-8 sm:px-12 md:px-20 lg:w-[860px] mx-auto"
 		>
 			{rows}
 		</div>

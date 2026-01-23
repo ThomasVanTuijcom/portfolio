@@ -1,12 +1,11 @@
 import clsx from "clsx";
 
-export default function Glassdiv({
-	children,
-	className,
-}: {
+type GlassDivProps = {
 	children: React.ReactNode;
 	className?: string;
-}) {
+};
+
+export default function Glassdiv({ children, className }: GlassDivProps) {
 	return (
 		<div
 			className={clsx(

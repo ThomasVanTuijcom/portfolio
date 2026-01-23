@@ -9,12 +9,18 @@ export default function Presentation({ id }: { id: string }) {
 	const greetings = [t("greetings.g1"), t("greetings.g2"), t("greetings.g3")];
 	return (
 		<div id={id} className="flex w-full justify-center">
-			<Glassdiv className="my-[110px] flex w-full gap-20 rounded-4xl px-4 py-10 lg:w-3/5 lg:px-15 lg:py-15">
-				<div className="flex w-full flex-col justify-center gap-2 lg:w-1/2">
+			<Glassdiv className="my-[100px] flex w-[1152px] gap-20 rounded-4xl px-4 md:px-8 py-10">
+				<div className="flex w-auto max-w-[480px] flex-col justify-center gap-2">
 					<h1
 						className={`${bakehaus.className} text-3xl text-[var(--text-secondary)]`}
 					>
-						<Typewriter words={greetings} loop={0} delaySpeed={3000} typeSpeed={200} deleteSpeed={170} />
+						<Typewriter
+							words={greetings}
+							loop={0}
+							delaySpeed={3000}
+							typeSpeed={200}
+							deleteSpeed={170}
+						/>
 						<Cursor />
 					</h1>
 					<h1 className={`${bakehaus.className} text-3xl`}>{t("name")}</h1>
@@ -23,7 +29,7 @@ export default function Presentation({ id }: { id: string }) {
 					<p className="mt-5 text-justify text-[var(--text-primary)]">
 						{t("presentationText")}
 					</p>
-					<div className="flex w-full justify-evenly lg:justify-normal lg:gap-10">
+					<div className="flex w-full justify-evenly">
 						<a
 							href="/resume-en.pdf"
 							download
@@ -55,14 +61,23 @@ export default function Presentation({ id }: { id: string }) {
 						</a>
 					</div>
 				</div>
-				<div className="hidden w-1/2 items-center justify-center md:flex">
-					<div className="relative h-full w-full">
+				{/* <div className="flex flex-1 items-center justify-center">
+					<div className="relative aspect-square w-full max-w-[549px]">
 						<Image
 							src="/illustration.png"
+							alt="Hello"
 							fill
 							className="object-contain"
-							priority
-							alt="Hero Picture"
+						/>
+					</div>
+				</div> */}
+				<div className="hidden flex-1 items-center justify-center md:flex">
+					<div className="relative aspect-square w-full min-w-[250px] max-w-[549px]">
+						<Image
+							src="/illustration.png"
+							alt="Hello"
+							fill
+							className="object-contain"
 						/>
 					</div>
 				</div>
