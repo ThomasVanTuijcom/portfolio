@@ -15,8 +15,9 @@ export default function NavBar() {
 		top: number;
 	} | null>(null);
 	const t = useTranslations("Navigation");
-	const { theme } = useTheme();
+	const { theme, toggleTheme } = useTheme();
 	const [menuOpen, setMenuOpen] = useState(false);
+	const themeIcon = theme == "dark" ? "/moon.svg" : "sun.svg";
 
 	const icons = [
 		{
@@ -71,17 +72,34 @@ export default function NavBar() {
 
 	return (
 		<nav className="relative flex w-full items-center justify-center px-4">
-			<button
-				onClick={() => setMenuOpen(true)}
-				className="absolute right-8 md:hidden"
-				aria-label="Open menu"
-			>
-				<div className="flex flex-col gap-1">
-					<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
-					<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
-					<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
-				</div>
-			</button>
+			{/* Bouton hamburger */}
+			{!menuOpen && (
+				<button
+					onClick={() => setMenuOpen(true)}
+					className="absolute right-8 md:hidden"
+					aria-label="Open menu"
+				>
+					<div className="flex flex-col gap-1">
+						<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+						<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+						<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+					</div>
+				</button>
+			)}
+
+			{/* Bouton de fermeture */}
+			{menuOpen && (
+				<button
+					onClick={() => setMenuOpen(false)}
+					className="absolute right-8 md:hidden"
+					aria-label="Close menu"
+				>
+					<div className="flex flex-col gap-1">
+						<span className="h-0.5 w-6 translate-y-2 rotate-45 bg-[var(--text-secondary)]" />
+						<span className="h-0.5 w-6 -translate-y-2 -rotate-45 bg-[var(--text-secondary)]" />
+					</div>
+				</button>
+			)}
 			<Glassdiv className="hidden h-14 w-[445px] flex-row items-center justify-between rounded-full px-4 py-3 sm:px-8 md:flex">
 				{icons.map(({ src, target, label }, i) => {
 					return (
@@ -110,7 +128,9 @@ export default function NavBar() {
 			</Glassdiv>
 			<div className="absolute top-1/2 right-4 hidden h-full -translate-y-1/2 gap-2 md:flex">
 				<ThemeSwitcher />
-				<LanguageSwitcher />
+				<Glassdiv className="rounded-full font-bold">
+					<LanguageSwitcher style="flex aspect-square h-full items-center justify-center rounded-full p-4" arrow={false} fullLang={false}/>
+				</Glassdiv>
 			</div>
 
 			{tooltip && (
@@ -127,42 +147,71 @@ export default function NavBar() {
 			)}
 
 			{menuOpen && (
-				<div className="fixed inset-0 z-50 flex items-center justify-center bg-black/40 md:hidden">
-					<Glassdiv className="w-[90%] max-w-sm rounded-2xl p-6">
-						<div className="flex justify-end">
-							<button
-								onClick={() => setMenuOpen(false)}
-								className="text-xl font-bold"
-							>
-								✕
-							</button>
-						</div>
+				<div className="fixed inset-0 z-40 flex justify-end bg-black/40 md:hidden">
+					<div className="relative h-screen w-[40vw] border-l border-l-[var(--text-secondary)] bg-[var(--background)] px-4">
+						{/* Bouton de fermeture */}
+						<button
+							onClick={() => setMenuOpen(false)}
+							className="absolute top-6 right-8 z-50 md:hidden"
+							aria-label="Close menu"
+						>
+							<div className="flex flex-col gap-1">
+								<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+								<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+								<span className="h-0.5 w-6 bg-[var(--text-secondary)]" />
+							</div>
+						</button>
 
-						<ul className="mt-6 flex flex-col gap-6">
-							{icons.map(({ src, target, label }, i) => (
-								<li
-									key={i}
-									className="flex items-center gap-4 text-lg"
-									onClick={() => setMenuOpen(false)}
-								>
-									<div className="relative h-6 w-6">
-										<Image
-											src={src}
-											alt={label}
-											fill
-											className="object-contain"
-										/>
+						{/* Icônes du menu */}
+						<div className="mt-20 flex h-full flex-col">
+							{icons.map(({ src, target, label }, i) => {
+								return (
+									<div key={i} className="mb-4 flex items-center rounded-md hover:bg-[var(--text-secondary)]">
+										<div className="relative h-6 w-6 p-2 sm:h-7 sm:w-7 md:h-8 md:w-8">
+											<Image
+												src={src}
+												alt={target}
+												fill
+												className="object-contain"
+											/>
+										</div>
+										<h2 className="ml-2">{label}</h2>
 									</div>
-									<span>{label}</span>
-								</li>
-							))}
-						</ul>
-
-						<div className="mt-8 flex justify-between">
-							<ThemeSwitcher />
-							<LanguageSwitcher />
+								);
+							})}
 						</div>
-					</Glassdiv>
+
+						{/* Bloc thème/langues en bas */}
+						<div className="flex absolute bottom-5 flex-col w-full justify-between">
+							{/* Theme switch à gauche */}
+							<div className="flex items-center cursor-pointer rounded-md hover:bg-[var(--text-secondary)]" onClick={toggleTheme}>
+								<div className="relative h-6 w-6">
+									<Image
+										src={themeIcon}
+										alt="theme"
+										fill
+										className="object-contain"
+									/>
+								</div>
+								<h2 className="ml-2">
+									{theme === "dark" ? "Dark Mode" : "Light Mode"}
+								</h2>
+							</div>
+
+							{/* Langues à droite */}
+							<div className="flex cursor-pointer rounded-md hover:bg-[var(--text-secondary)]">
+								<div className="relative h-6 w-6">
+									<Image
+										src={themeIcon}
+										alt="theme"
+										fill
+										className="object-contain"
+									/>
+								</div>
+								<LanguageSwitcher style="ml-2 text-[16px] font-normal" arrow={true} fullLang={true} />
+							</div>
+						</div>
+					</div>
 				</div>
 			)}
 		</nav>
