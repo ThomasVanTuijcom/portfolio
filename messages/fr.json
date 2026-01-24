@@ -8,7 +8,7 @@
     "name": "Je suis Thomas",
     "entitlement": "Développeur Junior",
     "place": "Bruxelles, Belgique",
-    "presentationText": "Développeur d’applications junior avec une solide expérience en programmation et en technologies web, je maîtrise des langages tels que Java, Kotlin, PHP, JavaScript et C/C++, ainsi que des frameworks comme React, Spring, Django et Laravel. Mon parcours m’a permis de travailler sur des projets académiques et professionnels, notamment lors d’un stage axé sur l’intégration SAP. Ces expériences m’ont donné le goût du travail en équipe, le souci de la qualité du code et la capacité d’apprendre rapidement de nouveaux outils. Je souhaite désormais mettre ces compétences au service d’un environnement professionnel où je pourrai continuer à progresser et apporter une contribution significative.",
+    "presentationText": "Développeur d'applications junior, avec une expérience en programmation et en technologies web. J'ai pu travailler avec des langages tels que Java, Kotlin, PHP, JavaScript et C/C++, ainsi que des frameworks comme React, Spring, Django et Laravel. Mon parcours m'a permis de travailler sur des projets académiques et professionnels, notamment lors d'un stage axé sur l'intégration SAP. Ces expériences m'ont permis de mettre en application les compétences acquises à l'école et m'ont donné la capacité d'apprendre rapidement de nouveaux outils. Je souhaite désormais mettre ces compétences au service d'un environnement professionnel où je pourrai continuer à progresser et apporter ma contribution.",
     "resumeBtn": "CV"
   },
   "Navigation": {
@@ -22,67 +22,62 @@
     "lightModeLbl": "Mode clair"
   },
   "Projects": {
-    "projectTitle": "Projets"
+    "projectTitle": "Projets",
+    "githubRedirectLbl": "Voir sur Github"
   },
   "Resume": {
     "expTitle": "Expérience",
     "educTitle": "Éducation",
     "Experience": {
       "job1": {
-        "title": "Assistant Commercial IT - Travail temporaire sur appel",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "2023 - Présent"
+        "title": "Conseiller en vente informatique",
+        "subtitle": "Travail temporaire sur appel",
+        "place": "Mediamarkt",
+        "date": "2019 - 2025"
       },
       "job2": {
-        "title": "Stage",
-        "subtitle": "Solution Web pour l’intégration des contrôles de code ABAP dans le système SAP",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "Février 2024 – Juin 2024"
+        "title": "Stage de fin d'études",
+        "subtitle": "Développement d'une solution web pour l'intégration de contrôles de code ABAP dans un système SAP",
+        "place": "Delaware",
+        "date": "Février 2024 - Juin 2024"
       },
       "job3": {
-        "title": "Job étudiant – Assistant Commercial IT",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "2019 – 2023"
-      },
-      "job4": {
-        "title": "Bénévole – Journée d’Action YOUCA",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
+        "title": "Bénévolat",
+        "subtitle": "YOUCA ACTION DAY",
+        "place": "Colruyt",
         "date": "19 Octobre 2019"
       },
-      "job5": {
-        "title": "Job étudiant – Archivage et Support Administratif",
-        "subtitle": "ONE – Office de la Naissance et de l’Enfance",
-        "place": "Bruxelles",
+      "job4": {
+        "title": "Archivage et Support Administratif",
+        "subtitle": "Job étudiant",
+        "place": "ONE - Office de la Naissance et de l'Enfance",
         "date": "2018"
       }
     },
     "Education": {
       "edu1": {
-        "title": "Certification en Enseignement Secondaire Supérieur",
-        "subtitle": "(Équivalent du Diplôme de l’Enseignement Secondaire)",
-        "place": "BeCentral - Campus 19 (Membre de 42)",
-        "date": "Septembre 2024 – Présent"
+        "title": "Formation en développement informatique",
+        "subtitle": "Parcours '’apprentissage en programmation",
+        "place": "BeCentral - Ecole 42 Belgique",
+        "date": "Septembre 2024 - Janvier 2026"
       },
       "edu2": {
-        "title": "Baccalauréat en Développement d’Applications (3ème année)",
+        "title": "Baccalauréat en Développement d'Applications",
         "subtitle": "",
-        "place": "Haute École Bruxelles Brabant – HE2B ESI",
-        "date": "Septembre 2021 – Septembre 2023"
+        "place": "Haute École Bruxelles Brabant - HE2B ESI",
+        "date": "Septembre 2021 - Septembre 2023"
       },
       "edu3": {
-        "title": "Certificat de l’Enseignement Secondaire Supérieur",
+        "title": "Certificat de l'Enseignement Secondaire Supérieur",
         "subtitle": "(Programme enseigné en néerlandais)",
-        "place": "ZAVO Campus – Zaventem Hoogstraat",
-        "date": "Septembre 2014 – Septembre 2021"
+        "place": "ZAVO Campus - Zaventem Hoogstraat",
+        "date": "Septembre 2014 - Septembre 2021"
       }
     }
   },
   "About": {
     "title": "Un Regard Approfondi,",
-    "description": "En tant que développeur junior, mon profil combine des bases techniques solides avec une grande adaptabilité et une forte volonté d'apprendre. Mes expériences, que ce soit à travers mon stage ou différents jobs étudiants, m'ont permis de développer de la rigueur, un sens du service et de la confiance en communication. Je crois que ces qualités, combinées à ma motivation et mon ambition de m'améliorer, me permettront de m'intégrer rapidement et de devenir un membre efficace et engagé de l'équipe qui me donnera l'opportunité de faire mes preuves."
+    "description": "Je suis un jeune développeur qui cherche à mettre en œuvre ses connaissances dans un milieu professionnel. Je suis quelqu'un de curieux, qui aime apprendre et approfondir les connaissances acquises. C'est pour cela que j'ai également étudié à l'école 42 à Bruxelles, où j'ai pu approfondir mes connaissances en langage C et apprendre en peer-to-peer. Depuis jeune, je m'intéresse à l'informatique. J'ai pu travailler dans un magasin informatique en tant que conseiller de vente. Ce poste m'a permis de connaître et de comprendre les produits que je vendais afin de conseiller au mieux les clients. J'aime travailler seul, mais j'apprécie également aborder des projets plus larges en équipe."
   },
   "Contact": {
     "title": "Prendre Contact",

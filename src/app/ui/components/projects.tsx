@@ -64,10 +64,10 @@ export default function Projects({ id }: { id: string }) {
 			</h2>
 			<div className="w-full max-w-[300px] sm:max-w-[550px] md:max-w-[600px] lg:max-w-[900px]">
 				<Slider {...settings}>
-					<ProjectCard title="Minishell" img="/projects/bash.png" />
-					<ProjectCard title="Boulderdash" img="/projects/bash.png" />
-					<ProjectCard title="SNCB" img="/projects/bash.png" />
-					<ProjectCard title="Another Project" img="/projects/bash.png" />
+					<ProjectCard title="Minishell" img="/projects/bash.png" target="https://github.com/ThomasVanTuijcom/minishell"/>
+					<ProjectCard title="Boulderdash" img="/projects/bash.png" target="https://github.com/ThomasVanTuijcom/minishell"/>
+					<ProjectCard title="SNCB" img="/projects/bash.png" target="https://github.com/ThomasVanTuijcom/minishell"/>
+					<ProjectCard title="Another Project" img="/projects/bash.png" target="https://github.com/ThomasVanTuijcom/minishell"/>
 				</Slider>
 			</div>
 		</div>

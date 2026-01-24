@@ -8,7 +8,7 @@
     "name": "I'm Thomas",
     "entitlement": "Junior Development",
     "place": "Brussels, Belgium",
-    "presentationText": "Junior application developer with a solid background in programming and web technologies, experienced with languages such as Java, Kotlin, PHP, JavaScript, and C/C++, as well as frameworks including React, Spring, Django, and Laravel. My journey has given me the opportunity to work on both academic projects and professional assignments, including an internship focused on SAP integration. Through these experiences, I have developed a strong interest in teamwork, an eye for code quality, and the ability to quickly learn new tools. I am now looking to apply these skills in a professional environment where I can continue to grow and make a meaningful contribution.",
+    "presentationText": "Junior application developer with experience in programming and web technologies. I have had the opportunity to work with languages such as Java, Kotlin, PHP, JavaScript, and C/C++, as well as frameworks like React, Spring, Django, and Laravel. My background has allowed me to work on both academic and professional projects, including an internship focused on SAP integration. These experiences enabled me to apply the skills I acquired at school and strengthened my ability to learn new tools quickly. I now wish to bring these skills to a professional environment where I can continue to grow and give my contribution.",
     "resumeBtn": "Resume"
   },
   "Navigation": {
@@ -22,7 +22,8 @@
     "lightModeLbl": "Light mode"
   },
   "Projects": {
-    "projectTitle": "Projects"
+    "projectTitle": "Projects",
+    "githubRedirectLbl": "View on Github"
   },
   "Resume": {
     "expTitle": "Experience",
@@ -82,7 +83,7 @@
   },
   "About": {
     "title": "A Closer Look,",
-    "description": "As a junior developer, my profile combines solid technical foundations with adaptability and a strong willingness to learn. My experiences, whether through my internship or various student jobs, have helped me develop rigor, a sense of service, and confidence in communication. I believe these qualities, together with my motivation and ambition to improve, will allow me to integrate quickly and become an effective and committed member of the team that gives me the opportunity to prove myself."
+    "description": "I am a young developer seeking to put my knowledge into practice in a professional environment. I am a curious person who enjoys learning and deepening the knowledge I have acquired. This is why I also studied at School 42 in Brussels, where I was able to deepen my knowledge of the C programming language and learn through peer-to-peer methods. From a young age, I have been interested in computer science; I had the opportunity to work in a computer store as a sales advisor. This position allowed me to understand and know the products I was selling in order to best advise customers. I enjoy working independently, but I also appreciate working on larger projects as part of a team."
   },
   "Contact": {
     "title": "Get in Touch",

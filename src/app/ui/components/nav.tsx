@@ -2,7 +2,7 @@
 
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { useRef, useState } from "react";
+import { useState } from "react";
 import Glassdiv from "./glass-div";
 import LanguageSwitcher from "./language-switcher";
 import { useTheme } from "./theme-context";

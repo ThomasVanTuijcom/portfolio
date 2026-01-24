@@ -8,7 +8,7 @@
     "name": "Ik ben Thomas",
     "entitlement": "Junior Developer",
     "place": "Brussel, België",
-    "presentationText": "Junior applicatieontwikkelaar met een stevige achtergrond in programmeren en webtechnologieën, ervaren met talen zoals Java, Kotlin, PHP, JavaScript en C/C++, en met frameworks zoals React, Spring, Django en Laravel. Mijn traject heeft mij de kans gegeven om aan zowel academische projecten als professionele opdrachten te werken, waaronder een stage gericht op SAP-integratie. Door deze ervaringen heb ik een sterke interesse ontwikkeld in teamwork, een oog voor codekwaliteit en het vermogen om snel nieuwe tools te leren. Ik ben nu op zoek naar een professionele omgeving waarin ik deze vaardigheden kan toepassen, verder kan groeien en een waardevolle bijdrage kan leveren.",
+    "presentationText": "Junior applicatieontwikkelaar met ervaring in programmeren en webtechnologieën. Ik heb de kans gehad om te werken met talen zoals Java, Kotlin, PHP, JavaScript en C/C++, evenals frameworks zoals React, Spring, Django en Laravel. Mijn achtergrond heeft mij in staat gesteld om zowel aan academische als professionele projecten te werken, waaronder een stage gericht op SAP-integratie. Deze ervaringen hebben mij in staat gesteld de vaardigheden die ik op school heb opgedaan in de praktijk te brengen en mijn vermogen om snel nieuwe tools te leren versterkt. Ik wil deze vaardigheden nu inzetten in een professionele omgeving waar ik kan blijven groeien en een bijdrage kan leveren.",
     "resumeBtn": "CV"
   },
   "Navigation": {
@@ -22,7 +22,8 @@
     "lightModeLbl": "Light mode"
   },
   "Projects": {
-    "projectTitle": "Projecten"
+    "projectTitle": "Projecten",
+    "githubRedirectLbl": "Zie op Github"
   },
   "Resume": {
     "expTitle": "Ervaring",
@@ -82,7 +83,7 @@
   },
   "About": {
     "title": "Een Nader Kijk,",
-    "description": "Als junior developer combineert mijn profiel een solide technische basis met aanpassingsvermogen en een sterke leergierigheid. Mijn ervaringen, zowel via mijn stage als verschillende studentenjobs, hebben mij geholpen om nauwkeurigheid, servicegerichtheid en zelfvertrouwen in communicatie te ontwikkelen. Ik geloof dat deze kwaliteiten, samen met mijn motivatie en ambitie om te verbeteren, mij in staat zullen stellen om snel te integreren en een effectief en betrokken lid te worden van het team dat mij de kans geeft om mezelf te bewijzen."
+    "description": "Ik ben een jonge ontwikkelaar die zijn kennis in de praktijk wil brengen in een professionele omgeving. Ik ben iemand die nieuwsgierig is en graag leert en zijn verworven kennis verder verdiept. Daarom heb ik ook gestudeerd aan School 42 in Brussel, waar ik mijn kennis van de programmeertaal C heb kunnen verdiepen en heb geleerd via peer-to-peer. Van jongs af aan ben ik geïnteresseerd in informatica; ik heb de kans gehad om in een computerwinkel te werken als verkoopadviseur. Deze functie heeft mij in staat gesteld de producten die ik verkocht te begrijpen en te kennen om klanten zo goed mogelijk te adviseren. Ik werk graag zelfstandig, maar ik waardeer het ook om aan grotere projecten in teamverband te werken."
   },
   "Contact": {
     "title": "Neem Contact Op",

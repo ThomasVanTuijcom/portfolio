@@ -36,12 +36,6 @@ export default function ResumeScroll({ id }: { id: string }) {
 			place: exp("job4.place"),
 			date: exp("job4.date"),
 		},
-		{
-			title: exp("job5.title"),
-			subtitle: exp("job5.subtitle"),
-			place: exp("job5.place"),
-			date: exp("job5.date"),
-		},
 	];
 	const education = [
 		{
