@@ -18,6 +18,10 @@ export default function NavBar() {
 	const { theme, toggleTheme } = useTheme();
 	const [menuOpen, setMenuOpen] = useState(false);
 	const themeIcon = theme == "dark" ? "/moon.svg" : "sun.svg";
+	const lanIcon =
+		theme == "dark"
+			? "/navIcons/dark/icon_Globe.svg"
+			: "/navIcons/light/icon_Globe.svg";
 
 	const icons = [
 		{
@@ -117,6 +121,12 @@ export default function NavBar() {
 							onMouseLeave={() => {
 								setTooltip(null);
 							}}
+							onClick={() => {
+								const el = document.getElementById(target);
+								if (el) {
+									el.scrollIntoView({ behavior: "smooth", block: "start" });
+								}
+							}}
 							className="flex cursor-pointer flex-col items-center"
 						>
 							<div className="relative mx-1.5 h-6 w-6 rounded-md p-2 transition-all duration-200 hover:scale-110 hover:bg-[var(--text-secondary)] sm:mx-2 sm:h-7 sm:w-7 md:h-8 md:w-8">
@@ -128,8 +138,13 @@ export default function NavBar() {
 			</Glassdiv>
 			<div className="absolute top-1/2 right-4 hidden h-full -translate-y-1/2 gap-2 md:flex">
 				<ThemeSwitcher />
-				<Glassdiv className="rounded-full font-bold">
-					<LanguageSwitcher style="flex aspect-square h-full items-center justify-center rounded-full p-4" arrow={false} fullLang={false}/>
+				<Glassdiv className="flex justify-center rounded-full font-bold">
+					<LanguageSwitcher
+						style="flex aspect-square h-full items-center justify-center rounded-full"
+						arrow={false}
+						fullLang={false}
+						allignText="text-center"
+					/>
 				</Glassdiv>
 			</div>
 
@@ -148,7 +163,7 @@ export default function NavBar() {
 
 			{menuOpen && (
 				<div className="fixed inset-0 z-40 flex justify-end bg-black/40 md:hidden">
-					<div className="relative h-screen w-[40vw] border-l border-l-[var(--text-secondary)] bg-[var(--background)] px-4">
+					<div className="relative h-screen w-[50vw] border-l border-l-[var(--text-secondary)] bg-[var(--background)] px-4 sm:w-[40vw]">
 						{/* Bouton de fermeture */}
 						<button
 							onClick={() => setMenuOpen(false)}
@@ -166,7 +181,21 @@ export default function NavBar() {
 						<div className="mt-20 flex h-full flex-col">
 							{icons.map(({ src, target, label }, i) => {
 								return (
-									<div key={i} className="mb-4 flex items-center rounded-md hover:bg-[var(--text-secondary)]">
+									<div
+										key={i}
+										className="mb-4 flex items-center rounded-md hover:bg-[var(--text-secondary)]"
+										onClick={() => {
+											const el = document.getElementById(target);
+											if (el) {
+												const yOffset = -20;
+												const y = el.getBoundingClientRect().top + window.scrollY + yOffset;
+												window.scrollTo({
+													behavior: "smooth",
+													top: y,
+												});
+											}
+										}}
+									>
 										<div className="relative h-6 w-6 p-2 sm:h-7 sm:w-7 md:h-8 md:w-8">
 											<Image
 												src={src}
@@ -182,9 +211,12 @@ export default function NavBar() {
 						</div>
 
 						{/* Bloc thème/langues en bas */}
-						<div className="flex absolute bottom-5 flex-col w-full justify-between">
+						<div className="absolute bottom-5 flex w-full flex-col justify-between">
 							{/* Theme switch à gauche */}
-							<div className="flex items-center cursor-pointer rounded-md hover:bg-[var(--text-secondary)]" onClick={toggleTheme}>
+							<div
+								className="flex cursor-pointer items-center rounded-md hover:bg-[var(--text-secondary)]"
+								onClick={toggleTheme}
+							>
 								<div className="relative h-6 w-6">
 									<Image
 										src={themeIcon}
@@ -194,7 +226,7 @@ export default function NavBar() {
 									/>
 								</div>
 								<h2 className="ml-2">
-									{theme === "dark" ? "Dark Mode" : "Light Mode"}
+									{theme === "dark" ? t("darkModeLbl") : t("lightModeLbl")}
 								</h2>
 							</div>
 
@@ -202,13 +234,18 @@ export default function NavBar() {
 							<div className="flex cursor-pointer rounded-md hover:bg-[var(--text-secondary)]">
 								<div className="relative h-6 w-6">
 									<Image
-										src={themeIcon}
+										src={lanIcon}
 										alt="theme"
 										fill
 										className="object-contain"
 									/>
 								</div>
-								<LanguageSwitcher style="ml-2 text-[16px] font-normal" arrow={true} fullLang={true} />
+								<LanguageSwitcher
+									style="ml-2 text-[16px] font-normal"
+									arrow={true}
+									fullLang={true}
+									allignText="text-start"
+								/>
 							</div>
 						</div>
 					</div>

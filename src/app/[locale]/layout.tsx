@@ -17,7 +17,7 @@ export default async function RootLayout({
     notFound();
   }
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="en">
       <head>
         {/* Meta viewport pour le responsive */}
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />

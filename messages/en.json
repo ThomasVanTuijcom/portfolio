@@ -17,7 +17,9 @@
     "projectsLbl": "Projects",
     "experienceLbl": "Experience",
     "aboutLbl": "About",
-    "contactLbl": "Contact"
+    "contactLbl": "Contact",
+    "darkModeLbl": "Dark mode",
+    "lightModeLbl": "Light mode"
   },
   "Projects": {
     "projectTitle": "Projects"

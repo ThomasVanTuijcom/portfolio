@@ -1,16 +1,17 @@
-"use client";
+import clsx from "clsx";
 import { useLocale } from "next-intl";
 import { usePathname, useRouter } from "next/navigation";
-import Glassdiv from "./glass-div";
 
 export default function LanguageSwitcher({
 	style,
 	arrow,
 	fullLang,
+	allignText,
 }: {
 	style: string;
 	arrow: boolean;
 	fullLang: boolean;
+	allignText: string;
 }) {
 	const router = useRouter();
 	const pathname = usePathname();
@@ -30,11 +31,17 @@ export default function LanguageSwitcher({
 	];
 
 	return (
-		<div className={style}>
+		<div className={clsx("relative inline-flex items-center", style)}>
 			<select
 				value={currentLocale}
 				onChange={(e) => handleLanguageChange(e.target.value)}
-				className="z-1 w-full cursor-pointer appearance-none bg-transparent text-center outline-none"
+				className={clsx(
+					allignText,
+					"z-10 w-full cursor-pointer appearance-none bg-transparent outline-none",
+					{
+						"pr-8": arrow, // ajoute padding seulement si arrow = true
+					},
+				)}
 			>
 				{languages.map(({ lan, label, longLbl }) => (
 					<option key={lan} value={lan} className="bg-[var(--background)]">
@@ -42,10 +49,11 @@ export default function LanguageSwitcher({
 					</option>
 				))}
 			</select>
+
 			{arrow && (
 				<svg
 					xmlns="http://www.w3.org/2000/svg"
-					className="pointer-events-none absolute right-5 h-4 w-4"
+					className="pointer-events-none absolute right-2 h-4 w-4 text-current"
 					fill="none"
 					viewBox="0 0 24 24"
 					stroke="currentColor"

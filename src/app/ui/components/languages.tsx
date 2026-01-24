@@ -4,6 +4,7 @@ import Glassdiv from "./glass-div";
 import { useEffect, useState } from "react";
 
 export default function Languages({ id }: { id: string }) {
+	const DEFAULT_ICONS_PER_ROW = 5;
 	const languages = [
 		{ icon: "/lanIcons/Logo_C.png", name: "C" },
 		{ icon: "/lanIcons/Logo_Cpp.png", name: "C++" },
@@ -22,16 +23,16 @@ export default function Languages({ id }: { id: string }) {
 		{ icon: "/lanIcons/Logo_React.png", name: "React" },
 	];
 
-	const getIconsPerRow = () => {
-		if (typeof window === "undefined") return 5;
-		if (window.innerWidth < 640) return 3;
-		if (window.innerWidth < 1024) return 4;
-		return 5;
-	};
-
-	const [iconsPerRow, setIconsPerRow] = useState(getIconsPerRow());
+	const [iconsPerRow, setIconsPerRow] = useState(DEFAULT_ICONS_PER_ROW);
 
 	useEffect(() => {
+		const getIconsPerRow = () => {
+			if (window.innerWidth < 640) return 3;
+			if (window.innerWidth < 1024) return 4;
+			return 5;
+		};
+		setIconsPerRow(getIconsPerRow());
+
 		const handleResize = () => setIconsPerRow(getIconsPerRow());
 		window.addEventListener("resize", handleResize);
 		return () => window.removeEventListener("resize", handleResize);
