@@ -1,98 +1,95 @@
 {
-  "Presentation": {
-    "greetings": {
-      "g1": "Hallo,", 
-      "g2": "Dag,", 
-      "g3": "Hoi,"
-    },
-    "name": "Ik ben Thomas",
-    "entitlement": "Junior Developer",
-    "place": "Brussel, België",
-    "presentationText": "Junior applicatieontwikkelaar met ervaring in programmeren en webtechnologieën. Ik heb de kans gehad om te werken met talen zoals Java, Kotlin, PHP, JavaScript en C/C++, evenals frameworks zoals React, Spring, Django en Laravel. Mijn achtergrond heeft mij in staat gesteld om zowel aan academische als professionele projecten te werken, waaronder een stage gericht op SAP-integratie. Deze ervaringen hebben mij in staat gesteld de vaardigheden die ik op school heb opgedaan in de praktijk te brengen en mijn vermogen om snel nieuwe tools te leren versterkt. Ik wil deze vaardigheden nu inzetten in een professionele omgeving waar ik kan blijven groeien en een bijdrage kan leveren.",
-    "resumeBtn": "CV"
-  },
-  "Navigation": {
-    "homeLbl": "Home",
-    "skillsLbl": "Vaardigheden",
-    "projectsLbl": "Projecten",
-    "experienceLbl": "Ervaring",
-    "aboutLbl": "Over mij",
-    "contactLbl": "Contact",
-    "darkModeLbl": "Dark mode",
-    "lightModeLbl": "Light mode"
-  },
-  "Projects": {
-    "projectTitle": "Projecten",
-    "githubRedirectLbl": "Zie op Github"
-  },
-  "Resume": {
-    "expTitle": "Ervaring",
-    "educTitle": "Opleiding",
-    "Experience": {
-      "job1": {
-        "title": "IT-verkoopassistent - Tijdelijk werk op oproepbasis",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "2023 - Heden"
-      },
-      "job2": {
-        "title": "Stage",
-        "subtitle": "Weboplossing voor het integreren van ABAP-codecontroles in het SAP-systeem",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "Februari 2024 – Juni 2024"
-      },
-      "job3": {
-        "title": "Studentenjob – IT-verkoopassistent",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "2019 – 2023"
-      },
-      "job4": {
-        "title": "Vrijwilliger – YOUCA Actiedag",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "19 Oktober 2019"
-      },
-      "job5": {
-        "title": "Studentenjob – Archivering en Administratieve Ondersteuning",
-        "subtitle": "ONE – Office de la Naissance et de l’Enfance",
-        "place": "Brussel",
-        "date": "2018"
-      }
-    },
-    "Education": {
-      "edu1": {
-        "title": "Certificaat Hoger Secundair Onderwijs",
-        "subtitle": "(Equivalent van het middelbare schooldiploma)",
-        "place": "BeCentral - Campus 19 (Lid van 42)",
-        "date": "September 2024 – Heden"
-      },
-      "edu2": {
-        "title": "Bachelor in Applicatieontwikkeling (3de jaar)",
-        "subtitle": "",
-        "place": "Hogeschool Brussel – HE2B ESI",
-        "date": "September 2021 – September 2023"
-      },
-      "edu3": {
-        "title": "Certificaat Hoger Secundair Onderwijs",
-        "subtitle": "(Nederlandstalig programma)",
-        "place": "ZAVO Campus – Zaventem Hoogstraat",
-        "date": "September 2014 – September 2021"
-      }
-    }
-  },
-  "About": {
-    "title": "Een Nader Kijk,",
-    "description": "Ik ben een jonge ontwikkelaar die zijn kennis in de praktijk wil brengen in een professionele omgeving. Ik ben iemand die nieuwsgierig is en graag leert en zijn verworven kennis verder verdiept. Daarom heb ik ook gestudeerd aan School 42 in Brussel, waar ik mijn kennis van de programmeertaal C heb kunnen verdiepen en heb geleerd via peer-to-peer. Van jongs af aan ben ik geïnteresseerd in informatica; ik heb de kans gehad om in een computerwinkel te werken als verkoopadviseur. Deze functie heeft mij in staat gesteld de producten die ik verkocht te begrijpen en te kennen om klanten zo goed mogelijk te adviseren. Ik werk graag zelfstandig, maar ik waardeer het ook om aan grotere projecten in teamverband te werken."
-  },
-  "Contact": {
-    "title": "Neem Contact Op",
-    "emailPlaceholder": "Uw e-mail",
-    "msgPlaceholder": "Uw bericht...",
-    "sendBtn": "Zend",
-    "emailReq": "E-mail is verplicht.",
-    "emailValid": "Voer een geldig e-mailadres in.",
-    "msgReq": "Een bericht is verplicht.",
-    "msgValid": "Het bericht moet minstens 10 tekens bevatten."
+	"Presentation": {
+		"greetings": {
+			"g1": "Hallo,",
+			"g2": "Dag,",
+			"g3": "Hoi,"
+		},
+		"name": "Ik ben Thomas",
+		"entitlement": "Junior Developer",
+		"place": "Brussel, België",
+		"presentationText": "Junior applicatieontwikkelaar met ervaring in programmeren en webtechnologieën. Ik heb de kans gehad om te werken met talen zoals Java, Kotlin, PHP, JavaScript en C/C++, evenals frameworks zoals React, Spring, Django en Laravel. Mijn achtergrond heeft mij in staat gesteld om zowel aan academische als professionele projecten te werken, waaronder een stage gericht op SAP-integratie. Deze ervaringen hebben mij in staat gesteld de vaardigheden die ik op school heb opgedaan in de praktijk te brengen en mijn vermogen om snel nieuwe tools te leren versterkt. Ik wil deze vaardigheden nu inzetten in een professionele omgeving waar ik kan blijven groeien en een bijdrage kan leveren.",
+		"resumeBtn": "CV"
+	},
+	"Navigation": {
+		"homeLbl": "Home",
+		"skillsLbl": "Vaardigheden",
+		"projectsLbl": "Projecten",
+		"experienceLbl": "Ervaring",
+		"aboutLbl": "Over mij",
+		"contactLbl": "Contact",
+		"darkModeLbl": "Dark mode",
+		"lightModeLbl": "Light mode"
+	},
+	"Projects": {
+		"projectTitle": "Projecten",
+		"githubRedirectLbl": "Zie op Github"
+	},
+	"Resume": {
+		"expTitle": "Ervaring",
+		"educTitle": "Opleiding",
+		"Experience": {
+			"job1": {
+				"title": "IT-verkoopadviseur",
+				"subtitle": "Tijdelijk werk op oproepbasis",
+				"place": "Mediamarkt",
+				"date": "2019 - 2025"
+			},
+			"job2": {
+				"title": "Eindstage",
+				"subtitle": "Ontwikkeling van een weboplossing voor de integratie van ABAP-codecontroles in een SAP-systeem",
+				"place": "Delaware",
+				"date": "Februari 2024 - Juni 2024"
+			},
+			"job3": {
+				"title": "Vrijwilligerswerk",
+				"subtitle": "YOUCA ACTION DAY",
+				"place": "Colruyt",
+				"date": "19 oktober 2019"
+			},
+			"job4": {
+				"title": "Archivering en administratieve ondersteuning",
+				"subtitle": "Studentenjob",
+				"place": "ONE - Office de la Naissance et de l'Enfance",
+				"date": "2018"
+			}
+		},
+		"Education": {
+			"edu1": {
+				"title": "Opleiding in softwareontwikkeling",
+				"subtitle": "Leertraject programmeren",
+				"place": "BeCentral - School 42 België",
+				"date": "September 2024 - Januari 2026"
+			},
+			"edu2": {
+				"title": "Bachelor in Applicatieontwikkeling",
+				"subtitle": "",
+				"place": "Hogeschool Brussel Brabant - HE2B ESI",
+				"date": "September 2021 - September 2023"
+			},
+			"edu3": {
+				"title": "Getuigschrift van het Hoger Secundair Onderwijs",
+				"subtitle": "(Programma onderwezen in het Nederlands)",
+				"place": "ZAVO Campus - Zaventem Hoogstraat",
+				"date": "September 2014 - September 2021"
+			}
+		}
+	},
+	"About": {
+		"title": "Een Nader Kijk,",
+		"description": "Ik ben een jonge ontwikkelaar die zijn kennis in de praktijk wil brengen in een professionele omgeving. Ik ben iemand die nieuwsgierig is en graag leert en zijn verworven kennis verder verdiept. Daarom heb ik ook gestudeerd aan School 42 in Brussel, waar ik mijn kennis van de programmeertaal C heb kunnen verdiepen en heb geleerd via peer-to-peer. Van jongs af aan ben ik geïnteresseerd in informatica; ik heb de kans gehad om in een computerwinkel te werken als verkoopadviseur. Deze functie heeft mij in staat gesteld de producten die ik verkocht te begrijpen en te kennen om klanten zo goed mogelijk te adviseren. Ik werk graag zelfstandig, maar ik waardeer het ook om aan grotere projecten in teamverband te werken."
+	},
+	"Contact": {
+		"title": "Neem Contact Op",
+		"emailPlaceholder": "Uw e-mail",
+		"msgPlaceholder": "Uw bericht...",
+		"sendBtn": "Zend",
+		"emailReq": "E-mail is verplicht.",
+		"emailValid": "Voer een geldig e-mailadres in.",
+		"msgReq": "Een bericht is verplicht.",
+		"msgValid": "Het bericht moet minstens 10 tekens bevatten."
+	},
+  "Footer": {
+    "rightsLbl": "All rights reserved"
   }
 }

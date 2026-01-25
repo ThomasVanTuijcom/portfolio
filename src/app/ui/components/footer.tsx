@@ -1,9 +1,12 @@
+import { useTranslations } from "next-intl";
+
 export default function Footer() {
+	const t = useTranslations("Footer");
 	return (
 		<footer className="w-full bg-[var(--text-secondary)] px-4 py-6">
 			<div className="mx-auto flex max-w-6xl flex-col items-center gap-4 sm:flex-row sm:justify-between">
 				<h5 className="text-center text-sm font-extrabold text-[var(--text-primary)] sm:text-left">
-					© {new Date().getFullYear()} Thomas Van Tuijcom — Tous droits réservés
+					© {new Date().getFullYear()} Thomas Van Tuijcom — {t("rightsLbl")}
 				</h5>
 			</div>
 		</footer>

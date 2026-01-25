@@ -1,98 +1,95 @@
 {
-  "Presentation": {
-    "greetings": {
-      "g1": "Hello,", 
-      "g2": "Hi,", 
-      "g3": "Hey,"
-    },
-    "name": "I'm Thomas",
-    "entitlement": "Junior Development",
-    "place": "Brussels, Belgium",
-    "presentationText": "Junior application developer with experience in programming and web technologies. I have had the opportunity to work with languages such as Java, Kotlin, PHP, JavaScript, and C/C++, as well as frameworks like React, Spring, Django, and Laravel. My background has allowed me to work on both academic and professional projects, including an internship focused on SAP integration. These experiences enabled me to apply the skills I acquired at school and strengthened my ability to learn new tools quickly. I now wish to bring these skills to a professional environment where I can continue to grow and give my contribution.",
-    "resumeBtn": "Resume"
-  },
-  "Navigation": {
-    "homeLbl": "Home",
-    "skillsLbl": "Skills",
-    "projectsLbl": "Projects",
-    "experienceLbl": "Experience",
-    "aboutLbl": "About",
-    "contactLbl": "Contact",
-    "darkModeLbl": "Dark mode",
-    "lightModeLbl": "Light mode"
-  },
-  "Projects": {
-    "projectTitle": "Projects",
-    "githubRedirectLbl": "View on Github"
-  },
-  "Resume": {
-    "expTitle": "Experience",
-    "educTitle": "Education",
-    "Experience": {
-      "job1": {
-        "title": "IT Sales Assistant - On-call temp work",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "2023 - Present"
-      },
-      "job2": {
-        "title": "Internship",
-        "subtitle": "Web Solution for Integrating ABAP-Code Checks into SAP System",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "February 2024 – June 2024"
-      },
-      "job3": {
-        "title": "Student Job – IT Sales Assistant",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "2019 – 2023"
-      },
-      "job4": {
-        "title": "Volunteer – YOUCA Action Day",
-        "subtitle": "",
-        "place": "Mediamarkt - Woluwe-Saint-Lambert",
-        "date": "October 19, 2019"
-      },
-      "job5": {
-        "title": "Student Job – Archiving and Administrative Support",
-        "subtitle": "ONE – Office de la Naissance et de l’Enfance (Child and Family Agency)",
-        "place": "Brussels",
-        "date": "2018"
-      }
-    },
-    "Education": {
-      "edu1": {
-        "title": "Certification in Upper Secondary Education",
-        "subtitle": "(High School Diploma equivalent)",
-        "place": "BeCentral - Campus 19 (Member of 42)",
-        "date": "September 2024 – Present"
-      },
-      "edu2": {
-        "title": "Bachelor’s Degree in Application Development (3rd Year)",
-        "subtitle": "",
-        "place": "Haute École Bruxelles Brabant – HE2B ESI",
-        "date": "September 2021 – September 2023"
-      },
-      "edu3": {
-        "title": "Upper Secondary Education Certificate",
-        "subtitle": "(Dutch-taught program)",
-        "place": "ZAVO Campus – Zaventem Hoogstraat",
-        "date": "September 2014 – September 2021"
-      }
-    }
-  },
-  "About": {
-    "title": "A Closer Look,",
-    "description": "I am a young developer seeking to put my knowledge into practice in a professional environment. I am a curious person who enjoys learning and deepening the knowledge I have acquired. This is why I also studied at School 42 in Brussels, where I was able to deepen my knowledge of the C programming language and learn through peer-to-peer methods. From a young age, I have been interested in computer science; I had the opportunity to work in a computer store as a sales advisor. This position allowed me to understand and know the products I was selling in order to best advise customers. I enjoy working independently, but I also appreciate working on larger projects as part of a team."
-  },
-  "Contact": {
-    "title": "Get in Touch",
-    "emailPlaceholder": "Your email",
-    "msgPlaceholder": "Your message...",
-    "sendBtn": "Send",
-    "emailReq": "Email is required.",
-    "emailValid": "Please enter a valid email address.",
-    "msgReq": "A message is required.",
-    "msgValid": "Message must be at least 10 characters long."
+	"Presentation": {
+		"greetings": {
+			"g1": "Hello,",
+			"g2": "Hi,",
+			"g3": "Hey,"
+		},
+		"name": "I'm Thomas",
+		"entitlement": "Junior Development",
+		"place": "Brussels, Belgium",
+		"presentationText": "Junior application developer with experience in programming and web technologies. I have had the opportunity to work with languages such as Java, Kotlin, PHP, JavaScript, and C/C++, as well as frameworks like React, Spring, Django, and Laravel. My background has allowed me to work on both academic and professional projects, including an internship focused on SAP integration. These experiences enabled me to apply the skills I acquired at school and strengthened my ability to learn new tools quickly. I now wish to bring these skills to a professional environment where I can continue to grow and give my contribution.",
+		"resumeBtn": "Resume"
+	},
+	"Navigation": {
+		"homeLbl": "Home",
+		"skillsLbl": "Skills",
+		"projectsLbl": "Projects",
+		"experienceLbl": "Experience",
+		"aboutLbl": "About",
+		"contactLbl": "Contact",
+		"darkModeLbl": "Dark mode",
+		"lightModeLbl": "Light mode"
+	},
+	"Projects": {
+		"projectTitle": "Projects",
+		"githubRedirectLbl": "View on Github"
+	},
+	"Resume": {
+		"expTitle": "Experience",
+		"educTitle": "Education",
+		"Experience": {
+			"job1": {
+				"title": "IT Sales Advisor",
+				"subtitle": "Temporary on-call work",
+				"place": "Mediamarkt",
+				"date": "2019 - 2025"
+			},
+			"job2": {
+				"title": "Final-year internship",
+				"subtitle": "Development of a web solution for integrating ABAP code checks into a SAP system",
+				"place": "Delaware",
+				"date": "February 2024 - June 2024"
+			},
+			"job3": {
+				"title": "Volunteering",
+				"subtitle": "YOUCA ACTION DAY",
+				"place": "Colruyt",
+				"date": "19 October 2019"
+			},
+			"job4": {
+				"title": "Archiving and Administrative Support",
+				"subtitle": "Student job",
+				"place": "ONE - Office for Birth and Childhood",
+				"date": "2018"
+			}
+		},
+		"Education": {
+			"edu1": {
+				"title": "Training in software development",
+				"subtitle": "Programming learning pathway",
+				"place": "BeCentral - School 42 Belgium",
+				"date": "September 2024 - January 2026"
+			},
+			"edu2": {
+				"title": "Bachelor’s degree in Application Development",
+				"subtitle": "",
+				"place": "Brussels Brabant University College - HE2B ESI",
+				"date": "September 2021 - September 2023"
+			},
+			"edu3": {
+				"title": "Upper Secondary Education Certificate",
+				"subtitle": "(Program taught in Dutch)",
+				"place": "ZAVO Campus - Zaventem Hoogstraat",
+				"date": "September 2014 - September 2021"
+			}
+		}
+	},
+	"About": {
+		"title": "A Closer Look,",
+		"description": "I am a young developer seeking to put my knowledge into practice in a professional environment. I am a curious person who enjoys learning and deepening the knowledge I have acquired. This is why I also studied at School 42 in Brussels, where I was able to deepen my knowledge of the C programming language and learn through peer-to-peer methods. From a young age, I have been interested in computer science; I had the opportunity to work in a computer store as a sales advisor. This position allowed me to understand and know the products I was selling in order to best advise customers. I enjoy working independently, but I also appreciate working on larger projects as part of a team."
+	},
+	"Contact": {
+		"title": "Get in Touch",
+		"emailPlaceholder": "Your email",
+		"msgPlaceholder": "Your message...",
+		"sendBtn": "Send",
+		"emailReq": "Email is required.",
+		"emailValid": "Please enter a valid email address.",
+		"msgReq": "A message is required.",
+		"msgValid": "Message must be at least 10 characters long."
+	},
+  "Footer": {
+    "rightsLbl": "All rights reserved"
   }
 }

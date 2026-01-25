@@ -88,5 +88,8 @@
     "emailValid": "Veuillez entrer une adresse email valide.",
     "msgReq": "Un message est requis.",
     "msgValid": "Le message doit contenir au moins 10 caractères."
+  },
+  "Footer": {
+    "rightsLbl": "Tous droits réservés"
   }
 }

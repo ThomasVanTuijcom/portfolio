@@ -65,9 +65,10 @@ export default function Projects({ id }: { id: string }) {
 			<div className="w-full max-w-[300px] sm:max-w-[550px] md:max-w-[600px] lg:max-w-[900px]">
 				<Slider {...settings}>
 					<ProjectCard title="Minishell" img="/projects/bash.png" target="https://github.com/ThomasVanTuijcom/minishell"/>
-					<ProjectCard title="Boulderdash" img="/projects/bash.png" target="https://github.com/ThomasVanTuijcom/minishell"/>
-					<ProjectCard title="SNCB" img="/projects/bash.png" target="https://github.com/ThomasVanTuijcom/minishell"/>
-					<ProjectCard title="Another Project" img="/projects/bash.png" target="https://github.com/ThomasVanTuijcom/minishell"/>
+					<ProjectCard title="Pipex" img="/projects/pipex.webp" target="https://github.com/ThomasVanTuijcom/pipex"/>
+					<ProjectCard title="Boulderdash" img="/projects/boulderdash.png" target="https://github.com/ThomasVanTuijcom/boulderdash"/>
+					<ProjectCard title="SNCB" img="/projects/stib.jpg" target="https://github.com/ThomasVanTuijcom/stibRide"/>
+					<ProjectCard title="Baba Is You" img="/projects/babaisyou.jpg" target="https://github.com/ThomasVanTuijcom/babaIsYou"/>
 				</Slider>
 			</div>
 		</div>
