@@ -80,7 +80,7 @@ export default function NavBar() {
 			{!menuOpen && (
 				<button
 					onClick={() => setMenuOpen(true)}
-					className="absolute right-8 md:hidden"
+					className="absolute top-2 right-8 md:hidden"
 					aria-label="Open menu"
 				>
 					<div className="flex flex-col gap-1">
@@ -104,6 +104,15 @@ export default function NavBar() {
 					</div>
 				</button>
 			)}
+			<div className="flex justify-center md:hidden">
+				<Image
+					src="/illustration.png"
+					alt="Hello"
+					height={150}
+					width={150}
+					className="object-contain"
+				/>
+			</div>
 			<Glassdiv className="hidden h-14 w-[445px] flex-row items-center justify-between rounded-full px-4 py-3 sm:px-8 md:flex">
 				{icons.map(({ src, target, label }, i) => {
 					return (

@@ -13,16 +13,7 @@ export default function Page() {
 	return (
 		<div>
 			<NavBar />
-			<div className="flex md:hidden justify-center">
-				<Image
-					src="/illustration.png"
-					alt="Hello"
-					height={150}
-          width={150}
-					className="object-contain"
-				/>
-			</div>
-			<main className="px-4">
+			<main className="px-4 space-y-24">
 				<Background />
 				<Presentation id="home" />
 				<Languages id="skills" />
