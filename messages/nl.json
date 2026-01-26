@@ -9,7 +9,8 @@
 		"entitlement": "Junior Developer",
 		"place": "Brussel, België",
 		"presentationText": "Junior applicatieontwikkelaar met ervaring in programmeren en webtechnologieën. Ik heb de kans gehad om te werken met talen zoals Java, Kotlin, PHP, JavaScript en C/C++, evenals frameworks zoals React, Spring, Django en Laravel. Mijn achtergrond heeft mij in staat gesteld om zowel aan academische als professionele projecten te werken, waaronder een stage gericht op SAP-integratie. Deze ervaringen hebben mij in staat gesteld de vaardigheden die ik op school heb opgedaan in de praktijk te brengen en mijn vermogen om snel nieuwe tools te leren versterkt. Ik wil deze vaardigheden nu inzetten in een professionele omgeving waar ik kan blijven groeien en een bijdrage kan leveren.",
-		"resumeBtn": "CV"
+		"resumeBtn": "CV",
+		"resumeHref": "/cv_Thomas_Van_Tuijcom_nl.pdf"
 	},
 	"Navigation": {
 		"homeLbl": "Home",

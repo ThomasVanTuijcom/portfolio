@@ -72,7 +72,7 @@ export default function ResumeScroll({ id }: { id: string }) {
 	const containerRefMobile = useRef<HTMLDivElement>(null);
 	const { scrollYProgress: scrollMobile } = useScroll({
 		target: containerRefMobile,
-		offset: ["center end", "end center"],
+		offset: ["start end", "end start"],
 	});
 	const progressHeightMobile = useTransform(
 		scrollMobile,

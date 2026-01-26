@@ -31,7 +31,7 @@ export default function Presentation({ id }: { id: string }) {
 					</p>
 					<div className="flex w-full justify-evenly">
 						<a
-							href="/resume-en.pdf"
+							href={t("resumeHref")}
 							download
 							className="z-1 mt-6 flex w-2/5 items-center justify-center gap-2 rounded-2xl bg-[var(--text-secondary)] px-5 py-2 font-bold text-[#292C33]"
 						>
