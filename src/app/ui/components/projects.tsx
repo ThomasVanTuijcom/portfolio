@@ -36,18 +36,18 @@ export default function Projects({ id }: { id: string }) {
 		dots: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 3,
+		slidesToShow: 1,
 		slidesToScroll: 1,
 		nextArrow: <NextArrow />,
 		prevArrow: <PrevArrow />,
 		responsive: [
 			{
 				breakpoint: 1024,
-				settings: { slidesToShow: 2 },
+				settings: { slidesToShow: 3 },
 			},
 			{
 				breakpoint: 640,
-				settings: { slidesToShow: 1 },
+				settings: { slidesToShow: 2 },
 			},
 		],
 	};
