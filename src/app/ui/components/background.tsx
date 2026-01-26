@@ -1,7 +1,7 @@
 export default function Background() {
 	return (
 		<div>
-			<div className="hidden sm:block pointer-events-none absolute inset-0 z-0 min-h-full w-full overflow-hidden">
+			<div className="hidden sm:block md:hidden pointer-events-none absolute inset-0 z-0 min-h-full w-full overflow-hidden">
 				<div id="verticalLine" />
 				<div id="horizontalLine" />
 				<div className="absolute top-80 right-10 h-20 w-20 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
@@ -21,7 +21,7 @@ export default function Background() {
 				<div className="absolute top-1280 left-40 h-16 w-16 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
 				<div className="absolute top-1445 right-50 h-10 w-10 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
 			</div>
-			<div className="hidden md:block pointer-events-none absolute inset-0 z-0 min-h-full w-full overflow-hidden">
+			<div className="hidden md:block lg:hidden pointer-events-none absolute inset-0 z-0 min-h-full w-full overflow-hidden">
 				<div id="verticalLine" />
 				<div id="horizontalLine" />
 				<div className="absolute top-45 right-160 h-20 w-20 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
@@ -41,7 +41,7 @@ export default function Background() {
 				<div className="absolute top-1250 left-50 h-16 w-16 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
 				<div className="absolute top-1405 right-80 h-10 w-10 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
 			</div>
-			<div className="hidden lg:block pointer-events-none absolute inset-0 z-0 min-h-full w-full overflow-hidden">
+			<div className="hidden lg:block xl:hidden pointer-events-none absolute inset-0 z-0 min-h-full w-full overflow-hidden">
 				<div id="verticalLine" />
 				<div id="horizontalLine" />
 				<div className="absolute top-45 right-160 h-20 w-20 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
@@ -61,7 +61,7 @@ export default function Background() {
 				<div className="absolute top-1270 left-120 h-16 w-16 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
 				<div className="absolute top-1405 right-80 h-10 w-10 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
 			</div>
-			<div className="hidden xl:block pointer-events-none absolute inset-0 z-0 min-h-full w-full overflow-hidden">
+			<div className="hidden xl:block 2xl:hidden pointer-events-none absolute inset-0 z-0 min-h-full w-full overflow-hidden">
 				<div id="verticalLine" />
 				<div id="horizontalLine" />
 				<div className="absolute top-45 right-160 h-20 w-20 rounded-full bg-gradient-to-br from-[#52B788] to-[#414751]" />
