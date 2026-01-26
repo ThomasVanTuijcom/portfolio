@@ -1,18 +1,14 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import Slider from "react-slick";
 import "slick-carousel/slick/slick-theme.css";
 import "slick-carousel/slick/slick.css";
 import { bakehaus } from "../fonts";
 import ProjectCard from "./project-card";
-import { CustomArrowProps } from "react-slick";
-
+import Slider, { CustomArrowProps } from "react-slick";
+import { useEffect, useState } from "react";
 import dynamic from "next/dynamic";
 
-const ProjectsSlider = dynamic(() => import("./projects-slider"), {
-	ssr: false,
-});
 
 function NextArrow({ onClick }: CustomArrowProps) {
 	return (
@@ -38,11 +34,26 @@ function PrevArrow({ onClick }: CustomArrowProps) {
 
 export default function Projects({ id }: { id: string }) {
 	const t = useTranslations("Projects");
+	const [slidesToShow, setSlidesToShow] = useState(3);
+
+	useEffect(() => {
+		const getSlidesToShow = () => {
+			if (window.innerWidth < 640) return 1;
+			if (window.innerWidth < 1024) return 2;
+			return 3;
+		};
+		setSlidesToShow(getSlidesToShow());
+
+		const handleResize = () => setSlidesToShow(getSlidesToShow());
+		window.addEventListener("resize", handleResize);
+		return () => window.removeEventListener("resize", handleResize);
+	}, []);
+	
 	const settings = {
 		dots: false,
 		infinite: true,
 		speed: 500,
-		slidesToShow: 3,
+		slidesToShow,
 		slidesToScroll: 1,
 		nextArrow: <NextArrow />,
 		prevArrow: <PrevArrow />,
@@ -69,7 +80,7 @@ export default function Projects({ id }: { id: string }) {
 				{t("projectTitle")}
 			</h2>
 			<div className="w-full max-w-[300px] sm:max-w-[550px] md:max-w-[600px] lg:max-w-[900px]">
-				<ProjectsSlider  {...settings}>
+				<Slider {...settings}>
 					<ProjectCard
 						title="Minishell"
 						img="/projects/bash.png"
@@ -95,7 +106,7 @@ export default function Projects({ id }: { id: string }) {
 						img="/projects/babaisyou.jpg"
 						target="https://github.com/ThomasVanTuijcom/babaIsYou"
 					/>
-				</ProjectsSlider>
+				</Slider>
 			</div>
 		</div>
 	);
