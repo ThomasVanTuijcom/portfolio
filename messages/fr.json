@@ -10,7 +10,8 @@
     "place": "Bruxelles, Belgique",
     "presentationText": "Développeur d'applications junior, avec une expérience en programmation et en technologies web. J'ai pu travailler avec des langages tels que Java, Kotlin, PHP, JavaScript et C/C++, ainsi que des frameworks comme React, Spring, Django et Laravel. Mon parcours m'a permis de travailler sur des projets académiques et professionnels, notamment lors d'un stage axé sur l'intégration SAP. Ces expériences m'ont permis de mettre en application les compétences acquises à l'école et m'ont donné la capacité d'apprendre rapidement de nouveaux outils. Je souhaite désormais mettre ces compétences au service d'un environnement professionnel où je pourrai continuer à progresser et apporter ma contribution.",
     "resumeBtn": "CV",
-    "resumeHref": "/cv_Thomas_Van_Tuijcom_fr.pdf"
+    "resumeHref": "/cv_Thomas_Van_Tuijcom_fr.pdf",
+		"avatarAlt": "Image d'un avatar en train de travailler sur un pc"
   },
   "Navigation": {
     "homeLbl": "Accueil",
@@ -24,7 +25,8 @@
   },
   "Projects": {
     "projectTitle": "Projets",
-    "githubRedirectLbl": "Voir sur Github"
+    "githubRedirectLbl": "Voir sur Github",
+		"illustrationAlt": "Illustration d'un projet"
   },
   "Resume": {
     "expTitle": "Expérience",
@@ -78,7 +80,8 @@
   },
   "About": {
     "title": "Un Regard Approfondi,",
-    "description": "Je suis un jeune développeur qui cherche à mettre en œuvre ses connaissances dans un milieu professionnel. Je suis quelqu'un de curieux, qui aime apprendre et approfondir les connaissances acquises. C'est pour cela que j'ai également étudié à l'école 42 à Bruxelles, où j'ai pu approfondir mes connaissances en langage C et apprendre en peer-to-peer. Depuis jeune, je m'intéresse à l'informatique. J'ai pu travailler dans un magasin informatique en tant que conseiller de vente. Ce poste m'a permis de connaître et de comprendre les produits que je vendais afin de conseiller au mieux les clients. J'aime travailler seul, mais j'apprécie également aborder des projets plus larges en équipe."
+    "description": "Je suis un jeune développeur qui cherche à mettre en œuvre ses connaissances dans un milieu professionnel. Je suis quelqu'un de curieux, qui aime apprendre et approfondir les connaissances acquises. C'est pour cela que j'ai également étudié à l'école 42 à Bruxelles, où j'ai pu approfondir mes connaissances en langage C et apprendre en peer-to-peer. Depuis jeune, je m'intéresse à l'informatique. J'ai pu travailler dans un magasin informatique en tant que conseiller de vente. Ce poste m'a permis de connaître et de comprendre les produits que je vendais afin de conseiller au mieux les clients. J'aime travailler seul, mais j'apprécie également aborder des projets plus larges en équipe.",
+    "standingProfileImgAlt": "Image d'un avatar debout en pleine réflexion"
   },
   "Contact": {
     "title": "Prendre Contact",
@@ -92,5 +95,8 @@
   },
   "Footer": {
     "rightsLbl": "Tous droits réservés"
+  },
+  "Languages": {
+    "iconAlt": "Icone de langage de programmation"
   }
 }

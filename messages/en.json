@@ -10,7 +10,8 @@
 		"place": "Brussels, Belgium",
 		"presentationText": "Junior application developer with experience in programming and web technologies. I have had the opportunity to work with languages such as Java, Kotlin, PHP, JavaScript, and C/C++, as well as frameworks like React, Spring, Django, and Laravel. My background has allowed me to work on both academic and professional projects, including an internship focused on SAP integration. These experiences enabled me to apply the skills I acquired at school and strengthened my ability to learn new tools quickly. I now wish to bring these skills to a professional environment where I can continue to grow and give my contribution.",
 		"resumeBtn": "Resume",
-		"resumeHref": "/cv_Thomas_Van_Tuijcom_en.pdf"
+		"resumeHref": "/cv_Thomas_Van_Tuijcom_en.pdf",
+		"avatarAlt": "Image of an avatar working on a pc"
 	},
 	"Navigation": {
 		"homeLbl": "Home",
@@ -24,7 +25,8 @@
 	},
 	"Projects": {
 		"projectTitle": "Projects",
-		"githubRedirectLbl": "View on Github"
+		"githubRedirectLbl": "View on Github",
+		"illustrationAlt": "Illustration of a project"
 	},
 	"Resume": {
 		"expTitle": "Experience",
@@ -78,7 +80,8 @@
 	},
 	"About": {
 		"title": "A Closer Look,",
-		"description": "I am a young developer seeking to put my knowledge into practice in a professional environment. I am a curious person who enjoys learning and deepening the knowledge I have acquired. This is why I also studied at School 42 in Brussels, where I was able to deepen my knowledge of the C programming language and learn through peer-to-peer methods. From a young age, I have been interested in computer science; I had the opportunity to work in a computer store as a sales advisor. This position allowed me to understand and know the products I was selling in order to best advise customers. I enjoy working independently, but I also appreciate working on larger projects as part of a team."
+		"description": "I am a young developer seeking to put my knowledge into practice in a professional environment. I am a curious person who enjoys learning and deepening the knowledge I have acquired. This is why I also studied at School 42 in Brussels, where I was able to deepen my knowledge of the C programming language and learn through peer-to-peer methods. From a young age, I have been interested in computer science; I had the opportunity to work in a computer store as a sales advisor. This position allowed me to understand and know the products I was selling in order to best advise customers. I enjoy working independently, but I also appreciate working on larger projects as part of a team.",
+		"standingProfileImgAlt": "Image of an avatar in standing position thinking"
 	},
 	"Contact": {
 		"title": "Get in Touch",
@@ -92,5 +95,8 @@
 	},
   "Footer": {
     "rightsLbl": "All rights reserved"
+  },
+  "Languages": {
+    "iconAlt": "Programming language icon"
   }
 }

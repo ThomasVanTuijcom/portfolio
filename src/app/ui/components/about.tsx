@@ -13,7 +13,7 @@ export default function About({ id }: { id: string }) {
 					<div className="relative hidden h-full w-1/3 sm:block">
 						<Image
 							src="/debout.png"
-							alt="Profile standing image"
+							alt={t("standingProfileImgAlt")}
 							fill
 							className="object-contain"
 							priority
@@ -45,7 +45,7 @@ export default function About({ id }: { id: string }) {
 						<div className="relative left-6 float-right h-[178px] w-[100px]">
 							<Image
 								src="/debout.png"
-								alt="Profile standing image"
+								alt={t("standingProfileImgAlt")}
 								fill
 								className="object-contain"
 								priority

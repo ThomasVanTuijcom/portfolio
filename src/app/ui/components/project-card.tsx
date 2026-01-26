@@ -19,7 +19,7 @@ export default function ProjectCard({
 					<Image
 						src={img}
 						fill
-						alt="Project screenshot"
+						alt={t("illustrationAlt")}
 						className="object-cover"
 					/>
 				</div>

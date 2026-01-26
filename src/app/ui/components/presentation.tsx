@@ -65,7 +65,7 @@ export default function Presentation({ id }: { id: string }) {
 					<div className="relative aspect-square w-full max-w-[549px] min-w-[250px]">
 						<Image
 							src="/illustration.png"
-							alt="Hello"
+							alt={t("avatarAlt")}
 							fill
 							className="object-contain"
 						/>

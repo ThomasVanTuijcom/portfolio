@@ -2,9 +2,11 @@
 import Image from "next/image";
 import Glassdiv from "./glass-div";
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
 export default function Languages({ id }: { id: string }) {
 	const DEFAULT_ICONS_PER_ROW = 5;
+	const t = useTranslations("Languages");
 	const languages = [
 		{ icon: "/lanIcons/Logo_C.png", name: "C" },
 		{ icon: "/lanIcons/Logo_Cpp.png", name: "C++" },
@@ -51,7 +53,7 @@ export default function Languages({ id }: { id: string }) {
 							<div className="absolute inset-3 z-1 rounded-full bg-white/100 shadow-[0_0_2px_0px_rgba(255,255,255,1)] blur-[8px] hover:bg-[var(--text-secondary)]"></div>
 							<Image
 								src={lang.icon}
-								alt="icon"
+								alt={t("iconAlt")}
 								fill
 								className="z-2 transform object-contain p-2 transition-transform duration-200 ease-in-out hover:scale-120"
 							/>
