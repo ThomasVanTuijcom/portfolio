@@ -57,7 +57,7 @@ body {
 	background: transparent;
 }
 
-@keyframes appear {
+/* @keyframes appear {
 	from {
 		transform: scale(0.8);
 	}
@@ -75,4 +75,4 @@ body {
 	animation: appear 1s ease-out;
 	animation-timeline: view();
 	animation-range: entry 0 cover 40%;
-}
+} */
