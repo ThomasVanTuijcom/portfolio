@@ -13,7 +13,7 @@ export default function Page() {
 	return (
 		<div>
 			<NavBar />
-			<main className="px-4 space-y-24">
+			<main className="px-4">
 				<Background />
 				<Presentation id="home" />
 				<Languages id="skills" />

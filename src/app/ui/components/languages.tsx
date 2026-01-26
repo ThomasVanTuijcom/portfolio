@@ -75,7 +75,7 @@ export default function Languages({ id }: { id: string }) {
 	return (
 		<div
 			id={id}
-			className="mx-auto flex h-[100vh] flex-col items-center justify-center gap-8 sm:px-12 md:px-20 lg:w-[860px]"
+			className="mx-auto flex h-[100vh] flex-col items-center justify-center my-32 gap-8 sm:px-12 md:px-20 lg:w-[860px]"
 		>
 			{rows}
 		</div>
