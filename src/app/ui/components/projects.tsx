@@ -95,7 +95,7 @@ export default function Projects({ id }: { id: string }) {
 						img="/projects/babaisyou.jpg"
 						target="https://github.com/ThomasVanTuijcom/babaIsYou"
 					/>
-				</Slider>
+				</ProjectsSlider>
 			</div>
 		</div>
 	);
